@@ -18,7 +18,7 @@
         "uki": false
     },
     "custom_commands": [
-    "runuser -l talha -c 'cd /tmp/ && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin/ && makepkg -si --noconfirm'"
+    "runuser -l muhammadtalha -c 'cd /tmp/ && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin/ && makepkg -si --noconfirm'"
     ],
     "hostname": "archlinux",
     "kernels": [
