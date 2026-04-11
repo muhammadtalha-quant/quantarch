@@ -3,6 +3,11 @@
         "audio_config": {
             "audio": "pipewire"
         },
+        "app_config": {
+            "power_management_config": {
+                "power_management": "power-profiles-daemon"
+            }
+        },
         "bluetooth_config": {
             "enabled": true
         },
@@ -40,7 +45,9 @@
         "fastfetch",
         "gcc",
         "git",
-        "kvantum",
+        "kaccounts-providers",
+        "kaccounts-integration",
+        "kio-gdrive",
         "github-cli",
         "kdeplasma-addons",
         "kgpg",
