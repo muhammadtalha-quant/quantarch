@@ -1,0 +1,85 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        },
+        "print_service_config": {
+            "enabled": false
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Grub",
+        "removable": false,
+        "uki": false
+    },
+    "custom_commands": [
+    "runuser -l talha -c 'cd /tmp/ && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin/ && makepkg -si --noconfirm'"
+    ],
+    "hostname": "archlinux",
+    "kernels": [
+        "linux-zen"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        "clang",
+        "fakeroot",
+        "base-devel",
+        "fastfetch",
+        "gcc",
+        "git",
+        "kvantum",
+        "github-cli",
+        "kdeplasma-addons",
+        "kgpg",
+        "lazygit",
+        "flatpak-kcm",
+        "libreoffice-fresh",
+        "networkmanager",
+        "noto-fonts",
+        "noto-fonts-emoji",
+        "plasma-meta",
+        "tinymist",
+        "ttf-jetbrains-mono",
+        "ttf-liberation",
+        "typst",
+        "spectacle",
+        "gwenview",
+        "mpv",
+        "okular",
+        "flatpak"
+    ],
+    "parallel_downloads": 4,
+    "profile_config": {
+        "greeter": "plasma-login-manager",
+        "profile": {
+            "custom_settings": {
+                "KDE Plasma": {}
+            },
+            "details": [
+                "KDE Plasma"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Asia/Karachi",
+    "version": "4.1"
+}
