@@ -1,5 +1,3 @@
-fastfetch
-
 # Path to your Oh My Zsh installation.
 export ZSH="$ZDOTDIR/ohmyzsh"
 export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
