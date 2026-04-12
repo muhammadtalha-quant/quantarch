@@ -28,6 +28,12 @@ install_omz_plugins() {
     source ~/.zshrc
 }
 
+install_gitconfig() {
+	echo -e "Installing your custom git config\n"
+	cp git/.gitconfig ~/
+       	echo -e "Successfully installed custom git config\n"
+}
+
 install_prompt() {
     curl -s https://ohmyposh.dev/install.sh | bash -s
     source ~/.zshrc
@@ -42,5 +48,7 @@ echo -e "\n"
 install_omz_plugins
 echo -e "\n"
 install_prompt
+echo -e "\n"
+install_gitconfig
 echo -e "\n"
 change_shell
