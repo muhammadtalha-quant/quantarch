@@ -4,7 +4,7 @@ fastfetch
 export ZSH="$ZDOTDIR/ohmyzsh"
 export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 
-if [[ ":$PATH:" != *"/home/$USER/.local/bin"* ]]
+if [[ ":$PATH:" != *"/home/$USER/.local/bin"* ]];
 then
 	export PATH=$PATH:/home/$USER/.local/bin
 fi
@@ -101,4 +101,4 @@ alias svi='sudo vi'
 alias vis='vim "+set si"'
 
 # OMP Prompt Init
-eval $(oh-my-posh init zsh --config "gruvbox")
+eval "$(oh-my-posh init zsh --config "gruvbox")"
