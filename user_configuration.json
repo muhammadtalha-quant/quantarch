@@ -76,7 +76,8 @@
         "gwenview",
         "mpv",
         "okular",
-        "flatpak"
+        "flatpak",
+	"keepassxc"
     ],
     "parallel_downloads": 4,
     "profile_config": {
