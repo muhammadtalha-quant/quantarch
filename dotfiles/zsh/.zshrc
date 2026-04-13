@@ -98,6 +98,7 @@ alias vi='vim'
 alias svi='sudo vi'
 alias vis='vim "+set si"'
 alias lg='lazygit'
+alias linutil='curl -fsSL https://christitus.com/linux | sh'
 
 # OMP Prompt Init
 eval "$(oh-my-posh init zsh --config "gruvbox")"
