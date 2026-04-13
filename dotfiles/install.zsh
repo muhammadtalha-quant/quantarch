@@ -1,54 +1,63 @@
 #!/usr/bin/env zsh
 
+install_chaoticaur() {
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    sudo pacman-key --lsign-key 3056513887B78AEB
+    sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+    sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+    print "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null 2>&1
+    sudo pacman -Syy --needed --noconfirm konsave
+}
+
 copy_dotfiles() {
-    echo -e "Copying and Symlinking Zsh Dotfiles\n"
+    print "Copying and Symlinking Zsh Dotfiles\n"
     cp -r zsh ~/.config/
     ln -s ~/.config/zsh/.zshrc ~/.zshrc
     source ~/.zshrc
-    echo -e "Successfully Copied and Symlinked Configurations"
+    print "Successfully Copied and Symlinked Configurations"
 }
 
 change_shell() {
-    echo -e "Changing Shell"
+    print "Changing Shell"
     chsh -s $(which zsh)
     sudo chsh -s $(which zsh)
     reboot
 }
 
 install_ohmyzsh() {
-    echo -e "\nInstalling Oh My Zsh\n"
+    print "\nInstalling Oh My Zsh\n"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 }
 
 install_omz_plugins() {
-    echo -e "Installing necessary zsh plugins\n"
+    print "Installing necessary zsh plugins\n"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    echo -e "\nPlugins Successfully Installed"
+    print "\nPlugins Successfully Installed"
     source ~/.zshrc
 }
 
 install_gitconfig() {
-	echo -e "Installing your custom git config\n"
+    print "\nInstalling your custom .gitconfig\n"
 	cp git/.gitconfig ~/
-       	echo -e "Successfully installed custom git config\n"
+	print "Successfully installed .gitconfig in your home\n"
 }
 
 install_prompt() {
     curl -s https://ohmyposh.dev/install.sh | bash -s
     source ~/.zshrc
-
 }
 
+install_chaoticaur
 
 install_ohmyzsh
-echo -e "\n"
+print
 copy_dotfiles
-echo -e "\n"
+print
 install_omz_plugins
-echo -e "\n"
+print
 install_prompt
-echo -e "\n"
+print
 install_gitconfig
-echo -e "\n"
+print
 change_shell
