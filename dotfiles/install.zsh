@@ -49,7 +49,7 @@ install_prompt() {
 }
 
 install_chaoticaur
-
+print
 install_ohmyzsh
 print
 copy_dotfiles
