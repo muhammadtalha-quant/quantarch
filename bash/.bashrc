@@ -274,9 +274,12 @@ als() {
 # Alias necessary commands
 
 alias snano='sudo nano'
-alias cp='cp -i'
-alias mv='mv -i'
+alias cp='cp -irv'
+alias mv='mv -iv'
 alias rm='rm -Irv'
+alias sucp='sudo cp -irv'
+alias sumv='sudo mv -iv'
+alias surm='sudo rm -Irv'
 alias mkdir='mkdir -p'
 alias ping='ping -c 10'
 alias less='less -R'
