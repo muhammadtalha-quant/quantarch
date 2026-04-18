@@ -425,6 +425,8 @@
     "dirname",
     "realpath",
     "unzip",
+    "zip",
+    "pacman-contrib",
     "curl",
     "git",
     "base-devel",
