@@ -4,6 +4,8 @@ case $- in
     *) return;;
 esac
 
+fastfetch
+
 # User configuration
 export LANG=en_US.UTF-8
 
