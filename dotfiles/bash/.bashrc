@@ -16,13 +16,13 @@ sysupdate() {
     case "$1" in
         -F|--no-flatpaks)    yay --noconfirm ;;
         -f|--only-flatpaks)  flatpak update -y && flatpak uninstall -y --unused ;;
-        -a|--all|"")         yay --noconfirm && flatpak update -y && flatpak uninstall -y --unused ;;
+        -a|--all)         yay --noconfirm && flatpak update -y && flatpak uninstall -y --unused ;;
         *)
             printf "Usage: sysupdate [scope]\n\n"
             printf "Scopes:\n"
             printf "  -F, --no-flatpaks    Update system packages only\n"
             printf "  -f, --only-flatpaks  Update flatpaks only\n"
-            printf "  -a, --all            Update everything (default)\n"
+            printf "  -a, --all            Update everything\n"
         ;;
     esac
 }
