@@ -1,0 +1,12 @@
+[bar.music-bar]
+background_opacity = 0.5
+capsule = true
+center = ["audio_visualizer", "media", "audio_visualizer"]
+end = ["network", "bluetooth", "volume", "brightness", "battery"]
+font_weight = 700
+margin_edge = 8.0
+margin_ends = 19.0
+padding = 15
+start = ["workspaces", "active_window"]
+thickness = 39
+widget_spacing = 7
