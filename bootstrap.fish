@@ -27,3 +27,5 @@ function bootstrap
     functions -e __install_chaotic_aur__
     functions -e __install_dotfiles
 end
+
+bootstrap
