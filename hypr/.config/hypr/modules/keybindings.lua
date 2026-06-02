@@ -129,15 +129,12 @@ hl.bind(
 -- 1. Apps
 
 local apps = {
-    [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = {cmd = "kitty",                 desc = "Open Kitty Terminal"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)] =    {cmd = "google-chrome-stable",  desc = "Open Google Chrome Browser"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)] =    {cmd = "code",                  desc = "Open VSCode"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)] =    {cmd = "dolphin",         desc = "Open Yazi File Manager"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)] =    {cmd = "kdeconnect-app",            desc = "Open KDEConnect"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.G)] =    {cmd = "gimp",                  desc = "Open GIMP"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.M)] =    {cmd = "kitty -e cava",         desc = "Open cava music simulator"}
+    [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = {cmd = "kitty",                                               desc = "Open Kitty Terminal"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)]    = {cmd = "google-chrome-stable",                                desc = "Open Google Chrome Browser"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)]    = {cmd = "code",                                                desc = "Open VSCode"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)]    = {cmd = "nautilus",                                            desc = "Open Files"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)]    = {cmd = "flatpak run org.localsend.localsend_app",             desc = "Open Localsend"},
 }
-
 
 for keybind,app in pairs(apps) do 
      hl.bind(
