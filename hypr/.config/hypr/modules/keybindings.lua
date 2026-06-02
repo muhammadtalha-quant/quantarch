@@ -159,8 +159,9 @@ local ipc = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.COMMA)] =                   {cmd = "noctalia msg panel-toggle launcher /emo",                           desc = "Toggle Emoji Selector"},         
     [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.C)] =                            {cmd = "noctalia msg panel-toggle control-center calendar",                 desc = "Toggle Calendar"},             
     [KEYS.XF86.AUDIORAISEVOLUME] =                                           {cmd = "noctalia msg volume-up",                                            desc = "Increase Volume"},
-    [KEYS.XF86.AUDIOLOWERVOLUME] =                                           {cmd = "noctalia msg volume-up",                                            desc = "Decrease Volume"},
+    [KEYS.XF86.AUDIOLOWERVOLUME] =                                           {cmd = "noctalia msg volume-down",                                          desc = "Decrease Volume"},
     [KEYS.XF86.AUDIOMUTE] =                                                  {cmd = "noctalia msg volume-mute",                                          desc = "Toggle Mute"},
+    [KEYS.XF86.AUDIOPLAY] =                                                  {cmd = "noctalia msg media toggle",                                         desc = "Toggle Audio Play/Pause"},
     [chord(KEYS.MODIFIER.ALT, KEYS.SPECIAL.ESCAPE)] =                        {cmd = "noctalia msg panel-toggle control-center system",                   desc = "Toggle Resource Monitor"},
     [chord(KEYS.MODIFIER.CTRL, KEYS.MODIFIER.ALT, KEYS.NAVIGATION.DELETE)] = {cmd = "noctalia msg panel-toggle session",                                 desc = "Toggle Session Menu"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.L)] =       {cmd = "noctalia msg screen-lock",                                          desc = "Lock Session"},
@@ -168,15 +169,11 @@ local ipc = {
 }
 
 local utils = {
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "hyprcap shot region -z -c -n",                 desc = "Capture Region"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.S)] =       {cmd = "hyprcap shot window:active -z -c -n",          desc = "Capture Focused Window"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.S)] =      {cmd = "hyprcap shot monitor:active -z -c -n",         desc = "Capture Full Screen"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] =     {cmd = "hyprcap rec region -c -n",                     desc = "Record Region"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.R)] =       {cmd = "hyprcap rec window:active -c -n",              desc = "Record Focused Window"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] =      {cmd = "hyprcap rec monitor:active -c -n",             desc = "Record Full Screen"},
-    [KEYS.LOCKS.SCROLLLOCK] =                                                {cmd = "hyprpicker -a -f hex",                         desc = "Pick Color"},
-    [KEYS.XF86.AUDIOPLAY] =                                                  {cmd = "playerctl play-pause",                         desc = "Toggle Audio Play/Pause"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "gnome-screenshot",                 desc = "Open Screenshot Tool"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] =     {cmd = "kooha",                            desc = "Open Screenrecording Tool"},
+    [KEYS.LOCKS.SCROLLLOCK] =                                                {cmd = "hyprpicker -a -f hex",             desc = "Pick Color"},
 }
+
 
 for keybind,call in pairs(ipc) do 
     hl.bind(
