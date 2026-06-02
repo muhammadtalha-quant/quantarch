@@ -175,6 +175,7 @@ local utils = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.R)] =       {cmd = "hyprcap rec window:active -c -n",              desc = "Record Focused Window"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] =      {cmd = "hyprcap rec monitor:active -c -n",             desc = "Record Full Screen"},
     [KEYS.LOCKS.SCROLLLOCK] =                                                {cmd = "hyprpicker -a -f hex",                         desc = "Pick Color"},
+    [KEYS.XF86.AUDIOPLAY] =                                                  {cmd = "playerctl play-pause",                         desc = "Toggle Audio Play/Pause"},
 }
 
 for keybind,call in pairs(ipc) do 
