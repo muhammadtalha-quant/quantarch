@@ -8,6 +8,7 @@ playerctl -F status | while read -l audio_status
           tomlq '.bar."main-bar".enabled = true | .bar."music-bar".enabled = false' \
                           .config/noctalia/bars.toml -t > /tmp/bars.toml
       end
-
-      mv /tmp/bars.toml .config/noctalia/bars.toml
+      if test -f /tmp/bars.toml
+        mv /tmp/bars.toml .config/noctalia/bars.toml
+      end
   end &
