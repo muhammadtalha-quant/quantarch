@@ -1,4 +1,7 @@
-# My OWN Dotfiles for Hyprland + Noctalia v5 + ArchLinux
+# My OWN Dotfiles for Hyprland + Noctalia v5 + Arch Linux
+
+> ![WARNING]
+> This works best with laptops and single monitor setup. So after installation, if it has problems then I am not accountable for it.
 
 ## Installation
 Following steps should be followed to install these configs. Unlike other configs where you install an OS and then install the config, this is a bit different, this config ships with `archinstall` json configs for quick and effortless install.
