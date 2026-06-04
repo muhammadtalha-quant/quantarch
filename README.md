@@ -1,7 +1,10 @@
 # My OWN Dotfiles for Hyprland + Noctalia v5 + Arch Linux
 
 > [!WARNING]
-> This works best with laptops and single monitor setup. So after installation, if it has problems then I am not accountable for it.
+> - This dotfiles setup works best with laptops and single monitor setup.
+> - If you have 4-8+ months of linux, distro hopping or rice hopping experience, then you should try this out too...
+> - You may not reach your zen mode (or flow state) with this dotfiles.... that is the exact reason I started working on my own dotfiles.
+> - In case of any errors, feel free to open issues.
 
 ## Installation
 Following steps should be followed to install these configs. Unlike other configs where you install an OS and then install the config, this is a bit different, this config ships with `archinstall` json configs for quick and effortless install.
