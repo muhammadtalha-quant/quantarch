@@ -169,8 +169,10 @@ local ipc = {
 }
 
 local utils = {
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "gnome-screenshot",                 desc = "Open Screenshot Tool"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] =     {cmd = "kooha",                            desc = "Open Screenrecording Tool"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "grim -g $(slurp) -t png -l 6 ~/Pictures/Captures/screenshot-$(date -Iseconds | sed 's/T/-/; s/+05:00//').png",                                                              desc = "Screenshot Region"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.S)] =      {cmd = "grim -t png -l 6 ~/Pictures/Captures/screenshot-$(date -Iseconds | sed 's/T/-/; s/+05:00//').png",                                                                         desc = "Screenshot Full Screen"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] =     {cmd = "wl-screenrec -g $(slurp) --audio --audio-device $SPEAKER -f ~/Videos/Captures/screenrecording-$(date -Iseconds | sed 's/T/-/; s/+05:00//').png",                            desc = "Screenrecord Region"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] =      {cmd = "wl-screenrec --audio --audio-device $SPEAKER -f ~/Videos/Captures/screenrecording-$(date -Iseconds | sed 's/T/-/; s/+05:00//').png",                                       desc = "Screenrecord Full Screen"},
     [KEYS.LOCKS.SCROLLLOCK] =                                                {cmd = "hyprpicker -a -f hex",             desc = "Pick Color"},
 }
 
