@@ -99,6 +99,7 @@ local  KEYS = {
     },
     XF86 = {
         -- Update according to your keyboard; use wev to find sym
+        -- Based on my current keyboard, ZUNTUO wired keyboard, model unknown
         HOMEPAGE = "XF86HomePage",                               -- Fn + F1   
         MAIL = "XF86Mail",                                       -- Fn + F2     
         SEARCH = "XF86Search",                                   -- Fn + F3 
@@ -110,7 +111,12 @@ local  KEYS = {
         AUDIORAISEVOLUME = "XF86AudioRaiseVolume",               -- Fn + F9               
         AUDIOMUTE = "XF86AudioMute",                             -- Fn + F10           
         EXPLORER = "XF86Explorer",                               -- Fn + F11           
-        CALCULATOR = "XF86Calculator"                            -- Fn + F12           
+        CALCULATOR = "XF86Calculator",                           -- Fn + F12         
+        
+        -- copied from my laptop's faulty keyboard
+        BRIGHTNESSDOWN = "XF86MonBrightnessDown",              -- Fn + F9     (ON MY LAPTOP)
+        BRIGHTNESSUP = "XF86MonBrightnessUp",                  -- Fn + F10    (ON MY LAPTOP)
+        SLEEP = "XF86Sleep",                                   -- Fn + F3     (ON MY LAPTOP)
     },
     MOUSE = {
         LMB = "mouse:272",
