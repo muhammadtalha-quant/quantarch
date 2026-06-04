@@ -1,7 +1,32 @@
-{    
-    "workspace": {
-        "library": [
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "library": [
             "/usr/share/hypr/stubs"
-        ]
-    }
+        ],
+    "ignoreDir": [
+      ".deps",
+      "build",
+      "test"
+    ],
+    "preloadFileSize": 1000,
+    "checkThirdParty": "Disable"
+  },
+  "diagnostics": {
+    "groupFileStatus": {
+      "strict": "Opened",
+      "strong": "Opened"
+    },
+    "groupSeverity": {
+      "strong": "Warning",
+      "strict": "Warning"
+    },
+    "unusedLocalExclude": [ "_*" ],
+    "disable": [
+      "luadoc-miss-see-name"
+    ]
+  }
 }
