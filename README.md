@@ -1,6 +1,6 @@
 # My OWN Dotfiles for Hyprland + Noctalia v5 + Arch Linux
 
-> ![WARNING]
+> [!WARNING]
 > This works best with laptops and single monitor setup. So after installation, if it has problems then I am not accountable for it.
 
 ## Installation
