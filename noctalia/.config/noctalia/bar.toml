@@ -1,2 +1,5 @@
 [bar]
-order = ["main-bar", "music-bar"]
+order = ["main-bar"]
+
+[bar.main-bar]
+enabled = true
