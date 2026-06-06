@@ -190,11 +190,7 @@ local utils = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] = {
         cmd = [[bash -c 'wl-screenrec --audio --audio-device "${SPEAKER:-default}" -f "$HOME/Videos/Captures/screenrecording-$(date -Iseconds | sed "s/T/-/;s/\+05:00//;s/:/-/g").mp4"']],
         desc = "Screenrecord Full Screen"
-    },
-    [KEYS.LOCKS.SCROLLLOCK] = {
-        cmd = "hyprpicker -a -f hex",
-        desc = "Pick Color"
-    },
+    }
 }
 
 
