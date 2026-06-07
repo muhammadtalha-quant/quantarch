@@ -190,11 +190,14 @@ local utils = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] = {
         cmd = [[bash -c 'wl-screenrec --audio --audio-device "${SPEAKER:-default}" -f "$HOME/Videos/Captures/screenrecording-$(date -Iseconds | sed "s/T/-/;s/\+05:00//;s/:/-/g").mp4"']],
         desc = "Screenrecord Full Screen"
+    },
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.S)] = {
+        cmd = [[bash -c 'grim -g "$(slurp)" - | tesseract - stdout -l eng | wl-copy']],
+        desc = "Perform OCR and copy contents of a selected region"
     }
 }
 
-
-for keybind,call in pairs(ipc) do 
+for keybind,call in pairs(ipc) do
     hl.bind(
         keybind,
         hl.dsp.exec_cmd(call.cmd),
