@@ -134,15 +134,46 @@ hl.bind(
 
 -- 1. Apps
 
-local apps = {
+local native_apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = {cmd = "kitty",                                               desc = "Open Kitty Terminal"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)]    = {cmd = "google-chrome-stable",                                desc = "Open Google Chrome Browser"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)]    = {cmd = "code",                                                desc = "Open VSCode"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)]    = {cmd = "nautilus",                                            desc = "Open Files"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)]    = {cmd = "flatpak run org.localsend.localsend_app",             desc = "Open Localsend"},
 }
 
-for keybind,app in pairs(apps) do 
+local sandboxed_apps = {
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)]    = {cmd = "flatpak run org.localsend.localsend_app",             desc = "Open Localsend"}
+}
+
+local web_apps = {
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.W)]    = {cmd = "google-chrome-stable --app=https://web.whatsapp.com",                    desc = "Open WhatsApp Web"},
+}
+
+
+
+for keybind,app in pairs(native_apps) do 
+     hl.bind(
+        keybind,
+        hl.dsp.exec_cmd(app.cmd),
+        {
+            description = app.desc,
+        }
+     )
+end
+
+
+for keybind,app in pairs(sandboxed_apps) do 
+     hl.bind(
+        keybind,
+        hl.dsp.exec_cmd(app.cmd),
+        {
+            description = app.desc,
+        }
+     )
+end
+
+
+for keybind,app in pairs(web_apps) do 
      hl.bind(
         keybind,
         hl.dsp.exec_cmd(app.cmd),
