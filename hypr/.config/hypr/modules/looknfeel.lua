@@ -26,6 +26,9 @@ hl.config({
       vibrancy = 0.1696,
     },
   },
+  misc = {
+      initial_workspace_tracking = 0
+  }
 })
 
 hl.workspace_rule({ workspace = "1", monitor = "eDP-1", persistent = true })
