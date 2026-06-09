@@ -147,6 +147,7 @@ local sandboxed_apps = {
 
 local web_apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.W)]    = {cmd = "google-chrome-stable --app=https://web.whatsapp.com",                    desc = "Open WhatsApp Web"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)]    = {cmd = "google-chrome-stable --app=https://chess.com",                           desc = "Open Chess.com"},
 }
 
 
