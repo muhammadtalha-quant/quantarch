@@ -145,11 +145,6 @@ local sandboxed_apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)]    = {cmd = "flatpak run org.localsend.localsend_app",             desc = "Open Localsend"}
 }
 
-local web_apps = {
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.W)]    = {cmd = "google-chrome-stable --app=https://web.whatsapp.com",                    desc = "Open WhatsApp Web"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)]    = {cmd = "google-chrome-stable --app=https://chess.com",                           desc = "Open Chess.com"},
-}
-
 
 
 for keybind,app in pairs(native_apps) do 
@@ -173,16 +168,6 @@ for keybind,app in pairs(sandboxed_apps) do
      )
 end
 
-
-for keybind,app in pairs(web_apps) do 
-     hl.bind(
-        keybind,
-        hl.dsp.exec_cmd(app.cmd),
-        {
-            description = app.desc,
-        }
-     )
-end
 
 -- 2. Utilities
 
