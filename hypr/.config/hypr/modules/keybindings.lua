@@ -99,6 +99,7 @@ local  KEYS = {
     },
     XF86 = {
         -- Update according to your keyboard; use wev to find sym
+        -- Based on my current keyboard, ZUNTUO wired keyboard, model unknown
         HOMEPAGE = "XF86HomePage",                               -- Fn + F1   
         MAIL = "XF86Mail",                                       -- Fn + F2     
         SEARCH = "XF86Search",                                   -- Fn + F3 
@@ -110,7 +111,12 @@ local  KEYS = {
         AUDIORAISEVOLUME = "XF86AudioRaiseVolume",               -- Fn + F9               
         AUDIOMUTE = "XF86AudioMute",                             -- Fn + F10           
         EXPLORER = "XF86Explorer",                               -- Fn + F11           
-        CALCULATOR = "XF86Calculator"                            -- Fn + F12           
+        CALCULATOR = "XF86Calculator",                           -- Fn + F12         
+        
+        -- copied from my laptop's faulty keyboard
+        BRIGHTNESSDOWN = "XF86MonBrightnessDown",              -- Fn + F9     (ON MY LAPTOP)
+        BRIGHTNESSUP = "XF86MonBrightnessUp",                  -- Fn + F10    (ON MY LAPTOP)
+        SLEEP = "XF86Sleep",                                   -- Fn + F3     (ON MY LAPTOP)
     },
     MOUSE = {
         LMB = "mouse:272",
@@ -128,15 +134,20 @@ hl.bind(
 
 -- 1. Apps
 
-local apps = {
+local native_apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = {cmd = "kitty",                                               desc = "Open Kitty Terminal"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)]    = {cmd = "google-chrome-stable",                                desc = "Open Google Chrome Browser"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)]    = {cmd = "code",                                                desc = "Open VSCode"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)]    = {cmd = "nautilus",                                            desc = "Open Files"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)]    = {cmd = "flatpak run org.localsend.localsend_app",             desc = "Open Localsend"},
 }
 
-for keybind,app in pairs(apps) do 
+local sandboxed_apps = {
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)]    = {cmd = "flatpak run org.localsend.localsend_app",             desc = "Open Localsend"}
+}
+
+
+
+for keybind,app in pairs(native_apps) do 
      hl.bind(
         keybind,
         hl.dsp.exec_cmd(app.cmd),
@@ -145,6 +156,18 @@ for keybind,app in pairs(apps) do
         }
      )
 end
+
+
+for keybind,app in pairs(sandboxed_apps) do 
+     hl.bind(
+        keybind,
+        hl.dsp.exec_cmd(app.cmd),
+        {
+            description = app.desc,
+        }
+     )
+end
+
 
 -- 2. Utilities
 
@@ -169,13 +192,29 @@ local ipc = {
 }
 
 local utils = {
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "gnome-screenshot",                 desc = "Open Screenshot Tool"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] =     {cmd = "kooha",                            desc = "Open Screenrecording Tool"},
-    [KEYS.LOCKS.SCROLLLOCK] =                                                {cmd = "hyprpicker -a -f hex",             desc = "Pick Color"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] = {
+        cmd = [[bash -c 'grim -g "$(slurp)" -t png -l 6 "$HOME/Pictures/Captures/screenshot-$(date -Iseconds | sed "s/T/-/;s/\+05:00//;s/:/-/g").png"']],
+        desc = "Screenshot Region"
+    },
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.S)] = {
+        cmd = [[bash -c 'grim -t png -l 6 "$HOME/Pictures/Captures/screenshot-$(date -Iseconds | sed "s/T/-/;s/\+05:00//;s/:/-/g").png"']],
+        desc = "Screenshot Full Screen"
+    },
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] = {
+        cmd = [[bash -c 'wl-screenrec -g "$(slurp)" --audio --audio-device "${SPEAKER:-default}" -f "$HOME/Videos/Captures/screenrecording-$(date -Iseconds | sed "s/T/-/;s/\+05:00//;s/:/-/g").mp4"']],
+        desc = "Screenrecord Region"
+    },
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] = {
+        cmd = [[bash -c 'wl-screenrec --audio --audio-device "${SPEAKER:-default}" -f "$HOME/Videos/Captures/screenrecording-$(date -Iseconds | sed "s/T/-/;s/\+05:00//;s/:/-/g").mp4"']],
+        desc = "Screenrecord Full Screen"
+    },
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.S)] = {
+        cmd = [[bash -c 'grim -g "$(slurp)" - | tesseract - stdout -l eng | wl-copy']],
+        desc = "Perform OCR and copy contents of a selected region"
+    }
 }
 
-
-for keybind,call in pairs(ipc) do 
+for keybind,call in pairs(ipc) do
     hl.bind(
         keybind,
         hl.dsp.exec_cmd(call.cmd),
