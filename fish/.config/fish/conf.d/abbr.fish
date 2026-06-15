@@ -13,7 +13,6 @@ abbr --add lldir 'eza -lgoh --icons --only-dirs --show-symlinks --git'
 abbr --add la 'eza -ah --icons --color=always'
 abbr --add lt 'eza --tree --icons --git'
 
-
 # ── Navigation ────────────────────────────────────────────
 abbr --add home 'cd ~'
 abbr --add .. 'cd ..'
@@ -49,3 +48,5 @@ abbr --add vim nvim
 abbr --add vi nvim
 abbr --add lg lazygit
 abbr --add linutil 'curl -fsSL https://christitus.com/linux | sh'
+abbr --add za 'zellij attach'
+abbr --add hx helix
