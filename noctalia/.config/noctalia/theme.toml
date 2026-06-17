@@ -1,8 +1,0 @@
-[theme]
-builtin = "Gruvbox"
-mode = "auto"
-source = "builtin"
-
-[theme.templates]
-builtin_ids = ["cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt"]
-enable_community_templates = false
