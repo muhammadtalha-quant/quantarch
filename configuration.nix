@@ -8,13 +8,8 @@
   hardware.bluetooth.enable = true;
 
   boot = {
-    #loader.systemd-boot.enable = true;
-    #loader.efi.canTouchEfiVariables = true;
-    loader.grub = {
-      enable = true;
-      device = "/dev/sda";
-      useOSProber = false;
-    };
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
