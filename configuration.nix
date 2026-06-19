@@ -100,11 +100,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
     hashedPassword = "$y$j9T$hbguh04FZh1JSM8nYVXS0.$9yG.bzlFyYT2NcDEKwxPmZuyN1Cz91DMpyewyfQAyM5";
-    packages = with pkgs; [
-	    vscode
-    	localsend
-        google-chrome
-    ];
   };
   
   nixpkgs.config.allowUnfree = true;
