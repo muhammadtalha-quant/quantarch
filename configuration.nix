@@ -20,6 +20,7 @@
     networkmanager.enable = true;
     # Firewall Settings
     firewall = {
+      enable = true;
       allowedTCPPorts = [ 53317 ]; 
       allowedUDPPorts = [ 53317 ];
     };
@@ -77,6 +78,8 @@
 	  hyprland = {
       enable = true;
       xwayland.enable = true;
+      withUWSM = false;
+      portalPackage = pkgs.xdg-desktop-portal-hyprland;
     };
 	  fish.enable = true;
 	  starship = {
@@ -100,7 +103,7 @@
     packages = with pkgs; [
 	    vscode
     	localsend
-      google-chrome
+        google-chrome
     ];
   };
   
@@ -110,7 +113,6 @@
     nerd-fonts.jetbrains-mono
     newcomputermodern
   ];
-
   environment.systemPackages = with pkgs; [
 	  git
 	  lazygit
