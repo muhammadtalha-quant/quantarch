@@ -17,7 +17,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.muhammadtalha = import ./home.nix;
+                users.muhammadtalha = import ./user/home.nix;
                 backupFileExtension = "bak";
               };
             }
