@@ -6,10 +6,7 @@
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
   programs.fish.enable = true;
-  programs.starship = {
-    enable = true;
-    presets = [ "gruvbox-rainbow" ];
-  };
+  #programs.starship.enable = true;
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
