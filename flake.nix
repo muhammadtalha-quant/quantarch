@@ -14,9 +14,12 @@
             ./configuration.nix
             homeManager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.muhammadtalha = import ./home.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.muhammadtalha = import ./home.nix;
+                backupFileExtension = "bak";
+              };
             }
           ];
       };
