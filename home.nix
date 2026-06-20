@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+      ./modules/fish.nix
+  ];
   
   home.username = "muhammadtalha";
   home.homeDirectory = "/home/muhammadtalha";
@@ -9,10 +13,9 @@
 
   
   programs.home-manager.enable = true;
-
-  
+  # base packages
   home.packages = with pkgs; [
-    vscode
+    vscode # intended for removal
     localsend
     google-chrome
   ];
