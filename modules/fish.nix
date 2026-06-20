@@ -47,8 +47,8 @@
         less = "less -R";
         cls = "clear";
         vim = "nvim";
-        nrs = "sudo nixos-rebuild switch --flake .";
-        nrb = "sudo nixos-rebuild boot --flake .";
+        nrs = "sudo nixos-rebuild switch --flake . --impure";
+        nrb = "sudo nixos-rebuild boot --flake . --impure";
     };
   };
 }
