@@ -5,6 +5,7 @@
   ];
 
   programs.fish = {
+    enable = true;
     shellAbbrs = {
         ls = "eza --icons --color=always";
         lla = "eza -lgaoh --icons --git";
@@ -47,6 +48,7 @@
         cls = "clear";
         vim = "nvim";
         nrs = "cd ~/dotfiles && sudo nixos-rebuild switch --flake .";
+        nrb = "cd ~/dotfiles && sudo nixos-rebuild boot --flake .";
     };
   };
 }
