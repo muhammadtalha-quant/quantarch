@@ -49,6 +49,7 @@
         vim = "nvim";
         nrs = "sudo nixos-rebuild switch --flake . --impure";
         nrb = "sudo nixos-rebuild boot --flake . --impure";
+        nrt = "sudo nixos-rebuild test --flake . --impure";
     };
   };
 }
