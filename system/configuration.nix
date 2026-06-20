@@ -3,9 +3,9 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
+    ./modules/hardware.nix
   ];
 
-  hardware.bluetooth.enable = true;
 
   boot = {
     loader.systemd-boot.enable = true;
