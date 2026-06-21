@@ -8,7 +8,6 @@
 	  lazygit
 	  gh
     neovim
-	  kitty
     nixd
     alejandra
   ];
