@@ -6,6 +6,7 @@
       ./modules/fish.nix
       ./modules/starship.nix
       ./modules/fastfetch.nix
+      ./modules/kitty.nix
   ];
   
   home.username = "muhammadtalha";
