@@ -2,9 +2,9 @@
   programs.fastfetch.enable = true;
   programs.fastfetch.settings = {
     logo  = {
-      source = "nixos_old";
+      source = "nixos";
       padding = {
-        right = 1;
+        right = 2;
       };
     };
     display = {
@@ -13,7 +13,7 @@
     modules = [
       {
         type = "custom";
-        format = "┌───────────────────────────────────────────┐";
+        format = "┌───────────────────────────────────────────────┐";
       }
       {
         type = "os";
@@ -58,7 +58,7 @@
       }
       {
         type = "custom";
-        format = "└───────────────────────────────────────────┘";
+        format = "└───────────────────────────────────────────────┘";
       }
       "break"
       {
