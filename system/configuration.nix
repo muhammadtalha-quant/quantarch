@@ -2,7 +2,7 @@
 
 {
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
     ./modules/hardware.nix
     ./modules/audio.nix
     ./modules/services.nix
@@ -13,15 +13,11 @@
     ./modules/networking.nix
     ./modules/firewall.nix
     ./modules/i18n.nix
+    ./modules/nix.nix
   ];
 
-
   time.timeZone = "Asia/Karachi";
-
-
   nixpkgs.config.allowUnfree = true;
-
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes"];	
   system.stateVersion = "26.05";
+
 }
