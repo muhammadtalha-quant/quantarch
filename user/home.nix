@@ -5,6 +5,7 @@
   imports = [
       ./modules/fish.nix
       ./modules/starship.nix
+      ./modules/fastfetch.nix
   ];
   
   home.username = "muhammadtalha";
