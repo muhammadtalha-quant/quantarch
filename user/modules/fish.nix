@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{pkgs, ...}:
 let
   myAbbreviations = {
     ls = "eza --icons --color=always";
@@ -45,13 +45,6 @@ let
     nrb = "sudo nixos-rebuild boot --flake .";
     nrt = "sudo nixos-rebuild test --flake .";
   };
-  shellEnvironmentVariables = ''
-    set -gx LANG en_US.UTF-8
-    set -gx EDITOR nvim
-    set -gx VISUAL nano
-    #set -x NOCTALIA_VERSION (noctalia -v | awk '{ print $2 }')
-    fish_add_path $HOME/.local/bin
-  '';
   myPlugins = [
     {
       name = "done";
@@ -62,15 +55,27 @@ let
       src = pkgs.fishPlugins.autopair.src;
     }
   ];
+  clh = ''
+    echo yes | history clear
+    clear
+  '';
 in 
 {
   home.packages = with pkgs; [
     eza
   ];
-  xdg.configFile."fish/conf.d/shellVars.fish".text = shellEnvironmentVariables;
+  xdg.configFile."fish/conf.d/shellVars.fish".text = ''
+    set -U fish_greeting
+    set -gx LANG en_US.UTF-8
+    set -gx EDITOR nvim
+    set -gx VISUAL nano
+    #set -x NOCTALIA_VERSION (noctalia -v | awk '{ print $2 }')
+    fish_add_path $HOME/.local/bin
+  '';
   programs.fish = {
     enable = true;
     shellAbbrs = myAbbreviations;
     plugins = myPlugins;
+    functions.clh.body = clh;
   };
 }
