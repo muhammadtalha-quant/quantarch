@@ -41,9 +41,9 @@ let
     less = "less -R";
     cls = "clear";
     vim = "nvim";
-    nrs = "sudo nixos-rebuild switch --flake . --impure";
-    nrb = "sudo nixos-rebuild boot --flake . --impure";
-    nrt = "sudo nixos-rebuild test --flake . --impure";
+    nrs = "sudo nixos-rebuild switch --flake .";
+    nrb = "sudo nixos-rebuild boot --flake .";
+    nrt = "sudo nixos-rebuild test --flake .";
   };
   shellEnvironmentVariables = ''
     set -gx LANG en_US.UTF-8
