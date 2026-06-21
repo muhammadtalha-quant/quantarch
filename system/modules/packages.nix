@@ -8,7 +8,6 @@
 	  lazygit
 	  gh
     neovim
-    fastfetch
 	  kitty
     nixd
     alejandra
