@@ -4,6 +4,8 @@
       layout = "us"; # Set Keyboard Layout to US
       variant = "";  # default variant
   };
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
   services.desktopManager.plasma6.enable = true; # intended for removal
   services.displayManager.sddm.enable = true; # intended for change into ly
 }
