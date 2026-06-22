@@ -10,5 +10,6 @@
     neovim
     nixd
     alejandra
+    nix-output-monitor
   ];
 }
