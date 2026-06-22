@@ -12,7 +12,6 @@ in
       signByDefault = true;
       signer = "/run/current-system/sw/bin/gpg2";
     };
-    # Changed from a list [] to an attribute set {}
     settings = {
       init = {
         defaultBranch = "main";
