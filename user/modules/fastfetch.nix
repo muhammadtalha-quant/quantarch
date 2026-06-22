@@ -10,6 +10,9 @@
     display = {
       separator = " : ";
     };
+    general = {
+      detectVersion = false;
+    };
     modules = [
       {
         type = "custom";
