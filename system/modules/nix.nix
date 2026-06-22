@@ -1,13 +1,7 @@
 {...}: {
-  nix.settings.experimental-features = [ "nix-command" "flakes"];	
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
   nix.optimise = {
     automatic = true;
-    dates = "weekly";
+    dates = "09:00:00";
   };
-  nix.settings.auto-optimise-store = true;
 }
