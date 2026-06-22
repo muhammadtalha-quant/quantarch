@@ -4,9 +4,6 @@
     newcomputermodern
   ];
   environment.systemPackages = with pkgs; [
-	  git
-	  lazygit
-	  gh
     neovim
     nixd
     alejandra
