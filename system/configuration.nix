@@ -14,6 +14,7 @@
     ./modules/firewall.nix
     ./modules/i18n.nix
     ./modules/nix.nix
+    ./modules/nh.nix
   ];
 
   time.timeZone = "Asia/Karachi";
