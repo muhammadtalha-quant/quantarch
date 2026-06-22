@@ -41,9 +41,10 @@ let
     less = "less -R";
     cls = "clear";
     vim = "nvim";
-    nrs = "sudo nixos-rebuild switch --flake .";
-    nrb = "sudo nixos-rebuild boot --flake .";
-    nrt = "sudo nixos-rebuild test --flake .";
+    nrs = "nh os switch";
+    nrb = "nh os boot";
+    nrt = "nh os test";
+    nfu = "nix flake update";
   };
   myPlugins = [
     {
@@ -75,6 +76,7 @@ in
   programs.fish = {
     enable = true;
     shellAbbrs = myAbbreviations;
+    shellInit = "fastfetch";
     plugins = myPlugins;
     functions.clh.body = clh;
   };
