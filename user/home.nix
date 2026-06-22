@@ -7,7 +7,7 @@
       ./modules/starship.nix
       ./modules/fastfetch.nix
       ./modules/kitty.nix
-      ./modules/git.nix
+      ./modules/vcs.nix
   ];
   
   home.username = "muhammadtalha";
