@@ -5,7 +5,7 @@
     size = 14;
   };
   programs.kitty.settings = {
-    remember_window_size = false;
+    remember_window_size = true;
     background_opacity = 0.8;
     confirm_os_window_close = 0;
     enable_audio_bell = false;
