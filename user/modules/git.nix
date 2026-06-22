@@ -12,42 +12,41 @@ in
       signByDefault = true;
       signer = "/run/current-system/sw/bin/gpg2";
     };
-    settings = [
-      { init.defaultBranch = "main"; }
-      { commit.gpgSign = true; }
-      { tag.gpgSign = true; }
-      {
-        user = {
-            name = "Muhammad Talha";
-            email = "muhammadtalha.quant@gmail.com";
-            useConfigOnly = true;
+    # Changed from a list [] to an attribute set {}
+    settings = {
+      init = {
+        defaultBranch = "main";
+      }; 
+      commit = {
+        gpgSign = true; 
+      };
+      tag = {
+        gpgSign = true; 
+      };
+      user = {
+        name = "Muhammad Talha";
+        email = "muhammadtalha.quant@gmail.com";
+        useConfigOnly = true;
+      };
+      credential = {
+        "https://github.com" = {
+          helper = githubCredentialHelper;
         };
-      }
-      {
-        credential = {
-          "https://github.com" = {
-            helper = githubCredentialHelper;
-          };
+        "https://gist.github.com" = {
+          helper = githubCredentialHelper;
         };
-      }
-      {
-        credential = {
-          "https://gist.github.com" = {
-            helper = githubCredentialHelper;
-           };
-        };
-      }
-      {
-        http = {
-          version = "HTTP/1.1";
-	        postBuffer = 524288000;
-	        lowSpeedLimit = 1000;
-	        lowSpeedTime = 600;
-        };
-      }
-    ];
+      };
+      http = {
+        version = "HTTP/1.1";
+        postBuffer = 524288000;
+        lowSpeedLimit = 1000;
+        lowSpeedTime = 600;
+      };
+    };
   };
+
   programs.lazygit.enable = true;
+
   programs.gh = {
     enable = true;
     settings.git_protocol = "ssh";
@@ -56,5 +55,6 @@ in
         user = "muhammadtalha-quant";
       };
     };
+    gitCredentialHelper.enable = false; 
   };
 }
