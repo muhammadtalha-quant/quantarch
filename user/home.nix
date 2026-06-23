@@ -8,6 +8,7 @@
       ./modules/fastfetch.nix
       ./modules/kitty.nix
       ./modules/vcs.nix
+      ./modules/eza.nix
   ];
   
   home.username = "muhammadtalha";
