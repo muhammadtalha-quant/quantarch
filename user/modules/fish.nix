@@ -41,10 +41,10 @@ let
     less = "less -R";
     cls = "clear";
     vim = "nvim";
-    nrs = "nh os switch";
-    nrb = "nh os boot";
-    nrt = "nh os test";
-    nfu = "nix flake update";
+    s = "nh os switch";
+    b = "nh os boot";
+    t = "nh os test";
+    u = "nix flake update --flake $FLAKE_UPDATE";
   };
   myPlugins = [
     {
