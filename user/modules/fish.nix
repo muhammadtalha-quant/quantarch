@@ -1,5 +1,4 @@
-{pkgs, ...}:
-let
+{pkgs, ...}: let
   myAbbreviations = {
     ls = "eza --icons --color=always";
     lla = "eza -lgaoh --icons --git";
@@ -15,26 +14,26 @@ let
     la = "eza -ah --icons --color=always";
     lt = "eza --tree --icons --git";
     home = "cd ~";
-    ".." =  "cd ..";
-    "..." =  "cd ../..";
-    "...." =  "cd ../../..";
+    ".." = "cd ..";
+    "..." = "cd ../..";
+    "...." = "cd ../../..";
     "000" = "chmod 000";
     "644" = "chmod 644";
     "666" = "chmod 666";
     "755" = "chmod 755";
     "777" = "chmod 777";
-    "000r" =  "chmod -R 000";
-    "644r" =  "chmod -R 644";
-    "666r" =  "chmod -R 666";
-    "755r" =  "chmod -R 755";
-    "777r" =  "chmod -R 777";
+    "000r" = "chmod -R 000";
+    "644r" = "chmod -R 644";
+    "666r" = "chmod -R 666";
+    "755r" = "chmod -R 755";
+    "777r" = "chmod -R 777";
     snano = "sudo nano";
     mkdir = "mkdir -p";
-    cp  = "cp -rv";
-    mv  = "mv -v";
-    rm  = "rm -frv";
-    vi  = "nvim";
-    lg  = "lazygit";
+    cp = "cp -rv";
+    mv = "mv -v";
+    rm = "rm -frv";
+    vi = "nvim";
+    lg = "lazygit";
     sucp = "sudo cp -rv";
     sumv = "sudo mv -v";
     surm = "sudo rm -frv";
@@ -60,13 +59,7 @@ let
     echo yes | history clear
     clear
   '';
-in 
-{
-  programs.eza = {
-    enable = true;
-    theme = "gruvbox-dark";
-    enableFishIntegration = true;
-  };
+in {
   xdg.configFile."fish/conf.d/shellVars.fish".text = ''
     set -U fish_greeting
     set -gx LANG en_US.UTF-8
