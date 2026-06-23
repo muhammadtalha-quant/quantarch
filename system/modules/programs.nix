@@ -1,9 +1,7 @@
 {pkgs, ...}: {
-  programs.hyprland = {
+  programs.sway = {
     enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    extraPackages = [];
   };
   programs.fish.enable = true;
   programs.gnupg.agent = {
