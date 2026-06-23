@@ -62,9 +62,11 @@ let
   '';
 in 
 {
-  home.packages = with pkgs; [
-    eza
-  ];
+  programs.eza = {
+    enable = true;
+    theme = "gruvbox-dark";
+    enableFishIntegration = true;
+  };
   xdg.configFile."fish/conf.d/shellVars.fish".text = ''
     set -U fish_greeting
     set -gx LANG en_US.UTF-8
