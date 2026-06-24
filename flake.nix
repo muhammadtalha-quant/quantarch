@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs , homeManager, ... } @inputs : {
+  outputs = { self, nixpkgs , homeManager, disko, ... } @inputs : {
   nixosConfigurations.quantnix = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
@@ -27,6 +27,8 @@
                 backupFileExtension = "bak";
               };
             }
+            disko.nixosModules.disko
+            ./system/disko.nix
           ];
       };
   };
