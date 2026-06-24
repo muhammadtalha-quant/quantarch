@@ -18,7 +18,6 @@
     };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -34,6 +33,7 @@
             useUserPackages = true;
             users.muhammadtalha = import ./user/home.nix;
             backupFileExtension = "bak";
+            extraSpecialArgs = { inherit inputs; };
           };
         }
         disko.nixosModules.disko
