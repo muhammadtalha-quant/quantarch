@@ -58,11 +58,32 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782277931,
+        "narHash": "sha256-ht3airtbYbGn015/N7s5uVNsiI9Ft4Y+0Qc3M+JTiyE=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "8126bac12213588aa951cbde9972ff7655e8d81f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
         "homeManager": "homeManager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "noctalia": "noctalia"
       }
     }
   },
