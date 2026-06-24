@@ -3,8 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    homeManager.url = "github:nix-community/home-manager/master";
-    homeManager.inputs.nixpkgs.follows = "nixpkgs";
+    homeManager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    disko = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs , homeManager, ... } @inputs : {
