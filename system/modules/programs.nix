@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   programs.sway = {
     enable = true;
-    extraPackages = [];
+    xwayland.enable = true;
+    extraPackages = [ pkgs.autotiling ];
   };
   programs.fish.enable = true;
   programs.gnupg.agent = {
