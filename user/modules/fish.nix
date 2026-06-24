@@ -43,7 +43,7 @@
     s = "nh os switch";
     b = "nh os boot";
     t = "nh os test";
-    u = "nix flake update --flake $FLAKE_UPDATE";
+    u = "nix flake update --flake $FLAKE_PATH";
   };
   myPlugins = [
     {
