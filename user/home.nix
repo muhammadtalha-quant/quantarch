@@ -11,6 +11,7 @@
       ./modules/eza.nix
       inputs.noctalia.homeModules.default
       ./modules/noctalia.nix
+      ./modules/sway.nix
   ];
   
   home.username = "muhammadtalha";
