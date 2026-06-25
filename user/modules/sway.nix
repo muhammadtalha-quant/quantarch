@@ -134,7 +134,8 @@ let
     vscode = "code";
   };
   ipc = {
-    launcher = "noctalia msg panel";
+    launcher = "noctalia msg panel-toggle launcher";
+    lock = "noctalia msg session lock";
   };
 in
 {
@@ -210,7 +211,8 @@ in
         };
       };
       gaps = {
-        smartGaps = "on";
+        inner = 10;
+        outer = 5;
         smartBorders = "on";
       };
       fonts = {
@@ -221,11 +223,31 @@ in
       keybindings = {
           "${keys.mod.super}+${keys.special.enter}" = "exec ${apps.kitty}";
           "${keys.mod.super}+${keys.alphabet.b}" = "exec ${apps.chrome}";
-          #"" = "";
-          #"" = "";
-          #"" = "";
-          #"" = "";
-          #"" = "";
+          "${keys.mod.super}+${keys.alphabet.c}" = "exec ${apps.vscode}";
+          "${keys.mod.super}+${keys.mod.shift}+${keys.alphabet.c}" = "reload";
+          "${keys.mod.super}+${keys.alphabet.q}" = "kill container";
+          "${keys.mod.super}+${keys.special.space}" = "exec ${ipc.launcher}";
+          "${keys.mod.super}+${keys.alphabet.l}" = "exec ${ipc.lock}";
+          "${keys.mod.super}+1" = "workspace number 1";
+          "${keys.mod.super}+2" = "workspace number 2";
+          "${keys.mod.super}+3" = "workspace number 3";
+          "${keys.mod.super}+4" = "workspace number 4";
+          "${keys.mod.super}+5" = "workspace number 5";
+          "${keys.mod.super}+6" = "workspace number 6";
+          "${keys.mod.super}+7" = "workspace number 7";
+          "${keys.mod.super}+8" = "workspace number 8";
+          "${keys.mod.super}+9" = "workspace number 9";
+          "${keys.mod.super}+0" = "workspace number 0";
+          "${keys.mod.super}+${keys.mod.shift}+1" = "move container to workspace number 1";
+          "${keys.mod.super}+${keys.mod.shift}+2" = "move container to workspace number 2";
+          "${keys.mod.super}+${keys.mod.shift}+3" = "move container to workspace number 3";
+          "${keys.mod.super}+${keys.mod.shift}+4" = "move container to workspace number 4";
+          "${keys.mod.super}+${keys.mod.shift}+5" = "move container to workspace number 5";
+          "${keys.mod.super}+${keys.mod.shift}+6" = "move container to workspace number 6";
+          "${keys.mod.super}+${keys.mod.shift}+7" = "move container to workspace number 7";
+          "${keys.mod.super}+${keys.mod.shift}+8" = "move container to workspace number 8";
+          "${keys.mod.super}+${keys.mod.shift}+9" = "move container to workspace number 9";
+          "${keys.mod.super}+${keys.mod.shift}+0" = "move container to workspace number 0";
       };
     };
   };
