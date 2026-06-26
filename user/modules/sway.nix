@@ -155,6 +155,10 @@ in
           always = true;
           command = "autotiling";
         }
+	{
+	  always = false;
+	  command = "swaymsg workspace 1";
+	}
       ];
 
       window = {
@@ -237,7 +241,7 @@ in
           "${keys.mod.super}+7" = "workspace number 7";
           "${keys.mod.super}+8" = "workspace number 8";
           "${keys.mod.super}+9" = "workspace number 9";
-          "${keys.mod.super}+0" = "workspace number 0";
+          "${keys.mod.super}+0" = "workspace number 10";
           "${keys.mod.super}+${keys.mod.shift}+1" = "move container to workspace number 1";
           "${keys.mod.super}+${keys.mod.shift}+2" = "move container to workspace number 2";
           "${keys.mod.super}+${keys.mod.shift}+3" = "move container to workspace number 3";
@@ -247,7 +251,9 @@ in
           "${keys.mod.super}+${keys.mod.shift}+7" = "move container to workspace number 7";
           "${keys.mod.super}+${keys.mod.shift}+8" = "move container to workspace number 8";
           "${keys.mod.super}+${keys.mod.shift}+9" = "move container to workspace number 9";
-          "${keys.mod.super}+${keys.mod.shift}+0" = "move container to workspace number 0";
+          "${keys.mod.super}+${keys.mod.shift}+0" = "move container to workspace number 10";
+          "${keys.mod.super}+${keys.arrow.up}" = "workspace next";
+          "${keys.mod.super}+${keys.mod.shift}+${keys.arrow.up}" = "move container to workspace next";
       };
     };
   };
