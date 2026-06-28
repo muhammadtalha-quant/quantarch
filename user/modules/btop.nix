@@ -1,0 +1,54 @@
+{...}: {
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "gruvbox_btop";
+      theme_background = true;
+      truecolor = true;
+      disable_presets = "Off";
+      graph_symbol = "braille";
+      update_ms =  100;
+    };
+    theme = {
+      gruvbox_btop = ''
+        theme[main_bg]="#282828"
+        theme[main_fg]="#fbf1c7"
+        theme[title]="#b8bb26"
+        theme[hi_fg]="#83a598"
+        theme[selected_bg]="#514c49"
+        theme[selected_fg]="#fbf1c7"
+        theme[inactive_fg]="#ebdbb2"
+        theme[proc_misc]="#fabd2f"
+        theme[cpu_box]="#786f6b"
+        theme[mem_box]="#786f6b"
+        theme[net_box]="#786f6b"
+        theme[proc_box]="#786f6b"
+        theme[div_line]="#504a47"
+        theme[temp_start]="#b8bb26"
+        theme[temp_mid]="#fabd2f"
+        theme[temp_end]="#83a598"
+        theme[cpu_start]="#b8bb26"
+        theme[cpu_mid]="#fabd2f"
+        theme[cpu_end]="#83a598"
+        theme[free_start]="#b8bb26"
+        theme[free_mid]="#fabd2f"
+        theme[free_end]="#83a598"
+        theme[cached_start]="#b8bb26"
+        theme[cached_mid]="#fabd2f"
+        theme[cached_end]="#83a598"
+        theme[available_start]="#b8bb26"
+        theme[available_mid]="#fabd2f"
+        theme[available_end]="#83a598"
+        theme[used_start]="#b8bb26"
+        theme[used_mid]="#fabd2f"
+        theme[used_end]="#83a598"
+        theme[download_start]="#b8bb26"
+        theme[download_mid]="#fabd2f"
+        theme[download_end]="#83a598"
+        theme[upload_start]="#b8bb26"
+        theme[upload_mid]="#fabd2f"
+        theme[upload_end]="#83a598"
+      '';
+    };
+  };
+}

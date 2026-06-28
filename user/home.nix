@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, inputs, ... }:
 
 {
 
@@ -12,6 +12,8 @@
       inputs.noctalia.homeModules.default
       ./modules/noctalia.nix
       ./modules/sway.nix
+      ./modules/btop.nix
+      ./modules/packages.nix
   ];
   
   home.username = "muhammadtalha";
@@ -20,10 +22,5 @@
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
-  # base packages
-  home.packages = with pkgs; [
-    vscode # intended for removal
-    localsend
-    google-chrome
-  ];
+ 
 }
