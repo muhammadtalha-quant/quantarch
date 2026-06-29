@@ -1,4 +1,4 @@
-{config, ... }:
+{config, inputs, ... }:
 
 {
   imports = [
@@ -15,6 +15,7 @@
     ./modules/i18n.nix
     ./modules/nix.nix
     ./modules/nh.nix
+    inputs.noctalia-greeter.nixosModules.default
   ];
 
   time.timeZone = "Asia/Karachi";

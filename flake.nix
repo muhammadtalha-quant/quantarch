@@ -1,11 +1,7 @@
 {
   description = "A monolithic single host flake that manages my complete NixOS System";
 
-  nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-  };
-
+  
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     homeManager = {
@@ -17,7 +13,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
-      url = "github:noctalia-dev/noctalia";
+    	url = "github:noctalia-dev/noctalia";
+	inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia-greeter = {
+	url = "github:noctalia-dev/noctalia-greeter";
+	inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
