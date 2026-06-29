@@ -9,7 +9,7 @@
       graph_symbol = "braille";
       update_ms =  100;
     };
-    theme = {
+    themes = {
       gruvbox_btop = ''
         theme[main_bg]="#282828"
         theme[main_fg]="#fbf1c7"
