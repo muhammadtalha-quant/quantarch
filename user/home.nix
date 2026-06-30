@@ -15,6 +15,7 @@
       ./modules/btop.nix
       ./modules/packages.nix
       ./modules/cava.nix
+      ./modules/wmutils.nix
   ];
   
   home.username = "muhammadtalha";

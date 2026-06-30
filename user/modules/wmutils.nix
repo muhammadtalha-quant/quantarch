@@ -12,6 +12,7 @@
       };
     };
     satty = {
+      enable = true;
       general = {
         fullscreen = false;
         "output-filename" = "~/Pictures/Screenshots/Annotated/screenshot_%H%M_%Y%m%d.png";
