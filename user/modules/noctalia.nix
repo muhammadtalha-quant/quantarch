@@ -27,7 +27,7 @@ in
         };
         screenshot = {
           directory = "~/Pictures/Screenshots";
-          pipe_command = "satty -f";
+          pipe_command = "satty -f -";
           pipe_to_command = true;
         };
         session.actions = [
@@ -60,27 +60,6 @@ in
             variant = "destructive";
           }
         ];
-      };
-      idle = {
-        behavior_order = [ "lock" "screenoff" "sleep" ];
-        pre_action_fade_seconds = 0;
-        behavior = {
-          lock = {
-            action = "lock";
-            enabled = true;
-            timeout = 600.0;
-          };
-          screenoff = {
-            action = "screen_off";
-            enabled = true;
-            timeout = 660.0;
-          };
-          sleep = {
-              action = "lock_and_suspend";
-              enabled = true;
-              timeout = 900.0;
-          };
-        };
       };
       wallpaper = {
         directory = "/home/muhammadtalha/Pictures";
@@ -248,6 +227,27 @@ in
           ];
         };
       };
+      idle = {
+        behavior_order = [ "lock" "screen-off" "lock-and-suspend" ];
+        pre_action_fade_seconds = 0;
+        behavior = {
+          lock = {
+            action = "lock";
+            enabled = true;
+            timeout = 600.0;
+          };
+          screen-off = {
+            action = "screen_off";
+            enabled = true;
+            timeout = 660.0;
+          };
+          lock-and-suspend = {
+            action = "lock_and_suspend";
+            enabled = true;
+            timeout = 900.0;
+          };
+        };
+      };
       location.address = "Mardan, Pakistan";
       weather.refresh_minutes = 5;
       desktop_widgets.enabled = false;
@@ -267,10 +267,10 @@ in
           visible = true;
         };
         widget.loginbox = {
-          box_height = 64.369140625;
-          box_width = 373.45703125;
-          cx = 683.267578125;
-          cy = 499.9794921875;
+          box_height = 64.0;
+          box_width = 350.154296875;
+          cx = 680.1728515625;
+          cy = 499.794921875;
           output = outputMonitor;
           rotation = 0.0;
           type = "login_box";
@@ -284,10 +284,10 @@ in
           };
         };
         widget.audiovis = {
-          box_height = 35.06640625;
-          box_width = 356.1640625;
-          cx = 690.44140625;
-          cy = 557.400390625;
+          box_height = 38.96484375;
+          box_width = 308.51953125;
+          cx = 676.525390625;
+          cy = 500.736328125;
           output = outputMonitor;
           rotation = 0.0;
           type = "audio_visualizer";
@@ -295,8 +295,8 @@ in
             background = false;
             bands = 100;
             centered = false;
-            color_1 = "primary";
-            color_2 = "secondary";
+            color_1 = "secondary";
+            color_2 = "tertiary";
             show_when_idle = false;
           };
         };
@@ -315,17 +315,17 @@ in
           };
         };
         widget.date = {
-          box_height = 48.0;
-          box_width = 288.0;
+          box_height = 34.22265625;
+          box_width = 315.708984375;
           cx = 683.0;
-          cy = 264.0625;
+          cy = 260.384765625;
           output = outputMonitor;
           rotation = 0.0;
           type = "clock";
           settings = {
             background = false;
             color = "secondary";
-            format = "{:%A, %d %B}";
+            format = "{:%A, %B %d}";
           };
         };
       };
