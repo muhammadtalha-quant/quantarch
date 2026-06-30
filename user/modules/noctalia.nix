@@ -98,6 +98,18 @@ in
         video_source = "focused";
       };
       widget.recorder.type = "noctalia/screen_recorder:recorder";
+      widget.weather.show_condition = false;
+      widget.network.show_label = false;
+      widget.active_window = {
+        icon_size = 17;
+        max_length = 128;
+        min_length = 35;
+        title_scroll = "always";
+      };
+      widget.clock = {
+        format = "{:%I:%M %p}";
+        tooltip_format = "{:%B %A %d, %Y}";
+      };
       theme = {
         builtin = "Gruvbox";
         templates = {
