@@ -17,7 +17,10 @@
     ./modules/nh.nix
     inputs.noctalia-greeter.nixosModules.default
   ];
-
+  
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
   time.timeZone = "Asia/Karachi";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "26.05";
