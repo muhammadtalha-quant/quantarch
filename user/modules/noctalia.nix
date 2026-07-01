@@ -64,8 +64,6 @@ in
       wallpaper = {
         directory = "/home/muhammadtalha/Pictures/Wallpapers";
         fill_mode = "stretch";
-        automation = true;
-        interval_seconds = 900;
         default.path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
         default.last = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
         default.monitors."${outputMonitor}".path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
