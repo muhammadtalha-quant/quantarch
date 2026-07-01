@@ -62,11 +62,13 @@ in
         ];
       };
       wallpaper = {
-        directory = "/home/muhammadtalha/Pictures";
+        directory = "/home/muhammadtalha/Pictures/Wallpapers";
         fill_mode = "stretch";
-        default.path = "/home/muhammadtalha/Pictures/buildings.png";
-        default.last = "/home/muhammadtalha/Pictures/buildings.png";
-        default.monitors."${outputMonitor}".path = "/home/muhammadtalha/Pictures/buildings.png";
+        automation = true;
+        interval_seconds = 900;
+        default.path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
+        default.last = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
+        default.monitors."${outputMonitor}".path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
       };
       plugins.enabled = [
         "noctalia/screen_recorder"
@@ -84,6 +86,10 @@ in
         max_length = 128;
         min_length = 35;
         title_scroll = "always";
+      };
+      widget.workspaces = {
+        focused_color = "secondary";
+        occupied_color = "tertiary";
       };
       widget.clock = {
         format = "{:%I:%M %p}";
