@@ -1,8 +1,9 @@
 {pkgs, inputs,  ...}: {
   programs.sway = {
     enable = true;
+    package = pkgs.swayfx;
     xwayland.enable = true;
-    extraPackages = [ pkgs.autotiling ];
+    extraPackages = [ ];
   };
   programs.fish.enable = true;
   programs.gnupg.agent = {
@@ -18,8 +19,8 @@
     greeter-args = "";
     settings = {
       cursor = {
-        theme = "Adwaita";
-        size = 24;
+        theme = "capitaine-cursors-gruvbox";
+        size = 28;
       };
       keyboard = {
         layout = "us";

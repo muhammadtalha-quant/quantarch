@@ -1,4 +1,4 @@
-{...}: 
+{pkgs, ...}: 
 let 
   gruvbox = {
     primary            = "#b8bb26";
@@ -141,6 +141,8 @@ in
 {
   wayland.windowManager.sway = {
     enable = true;
+    package = null;
+    checkConfig = false;
     config = {
       modifier = keys.mod.super;
       terminal = apps.kitty;
@@ -155,10 +157,10 @@ in
           always = true;
           command = "autotiling";
         }
-	{
-	  always = false;
-	  command = "swaymsg workspace 1";
-	}
+	      {
+	        always = false;
+	        command = "swaymsg workspace 1";
+	      }
       ];
 
       window = {
@@ -215,8 +217,8 @@ in
         };
       };
       gaps = {
-        inner = 10;
-        outer = 5;
+        inner = 7;
+        outer = 10;
         smartBorders = "on";
       };
       fonts = {
@@ -254,7 +256,27 @@ in
           "${keys.mod.super}+${keys.mod.shift}+0" = "move container to workspace number 10";
           "${keys.mod.super}+${keys.arrow.up}" = "workspace next";
           "${keys.mod.super}+${keys.mod.shift}+${keys.arrow.up}" = "move container to workspace next";
+          "${keys.mod.super}+${keys.alphabet.v}" = "split v";
+          "${keys.mod.super}+${keys.alphabet.h}" = "split h";
       };
     };
+    extraConfig = ''
+      corner_radius 20
+
+      shadows enable
+      shadow_blur_radius 4
+      shadow_color #1a1a1aee
+
+      blur enable
+      blur_radius 3
+      blur_passes 2
+
+      layer_effects "noctalia-bar" {
+        blur enable
+      }
+      layer_effects "noctalia-notification" {
+          blur enable
+      }
+    '';
   };
 }
