@@ -36,7 +36,7 @@
     enable =true;
     gtk.enable = true;
     x11.enable = true;
-    name = "capitaine-cursors-gruvbox";
+    name = "Capitaine Cursors (Gruvbox)";
     package = pkgs.capitaine-cursors-themed;
     size = 28;
   };

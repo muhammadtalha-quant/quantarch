@@ -153,10 +153,6 @@ in
           always = false;
           command = "noctalia";
         }
-        {
-          always = true;
-          command = "autotiling";
-        }
 	      {
 	        always = false;
 	        command = "swaymsg workspace 1";
@@ -260,6 +256,12 @@ in
           "${keys.mod.super}+${keys.alphabet.h}" = "split h";
       };
     };
+    extraConfigEarly = ''
+      seat seat0 xcursor_theme "Capitaine Cursors (Gruvbox)" 28
+
+      exec_always dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"
+      exec_always dconf write /org/gnome/desktop/interface/cursor-size 28
+    '';
     extraConfig = ''
       corner_radius 20
 

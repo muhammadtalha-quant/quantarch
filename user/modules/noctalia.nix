@@ -98,12 +98,7 @@ in
       theme = {
         builtin = "Gruvbox";
         templates = {
-          builtin_ids = [ 
-            "gtk3"
-            "gtk4"
-            "kcolorscheme"
-            "qt"
-          ];
+          builtin_ids = [ ];
           enable_community_templates = false;
         };
       };

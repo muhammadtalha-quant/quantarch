@@ -19,7 +19,7 @@
     greeter-args = "";
     settings = {
       cursor = {
-        theme = "capitaine-cursors-gruvbox";
+        theme = "Capitaine Cursors (Gruvbox)";
         size = 28;
       };
       keyboard = {
