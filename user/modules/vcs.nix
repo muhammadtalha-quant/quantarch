@@ -45,5 +45,8 @@ in
 
   programs.lazygit.enable = true;
 
-  programs.gh.enable = true;
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper.enable = false;
+  };
 }
