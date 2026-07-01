@@ -1,11 +1,10 @@
 {pkgs, inputs,  ...}: {
-  programs.fish.enable = true;
   programs.sway = {
-	  enable = true;
-	  xwayland.enable = true;
-	  package = pkgs.swayfx;
-    extraPackages = [];
+    enable = true;
+    xwayland.enable = true;
+    extraPackages = [ pkgs.autotiling ];
   };
+  programs.fish.enable = true;
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
@@ -19,8 +18,8 @@
     greeter-args = "";
     settings = {
       cursor = {
-        theme = "capitaine-cursors-gruvbox";
-        size = 28;
+        theme = "Adwaita";
+        size = 24;
       };
       keyboard = {
         layout = "us";
@@ -28,5 +27,4 @@
     };
   };
   programs.gpu-screen-recorder.enable = true;
-  programs.dconf.enable = true;
 }
