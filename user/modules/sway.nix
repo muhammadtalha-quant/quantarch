@@ -111,7 +111,7 @@ let
       audioprev = "XF86AudioPrev";                          #   -- Fn + F6       
       audionext = "XF86AudioNext";                          #   -- Fn + F7       
       audiolowervolume = "XF86AudioLowerVolume";            #   -- Fn + F8               
-      audioraiservolume = "XF86AudioRaiseVolume";            #   -- Fn + F9               
+      audioraisevolume = "XF86AudioRaiseVolume";            #   -- Fn + F9               
       audiomute = "XF86AudioMute";                          #   -- Fn + F10           
       explorer = "XF86Explorer";                            #   -- Fn + F11           
       calculator = "XF86Calculator";                        #   -- Fn + F12         
@@ -126,6 +126,10 @@ let
       rmb = "mouse:273";
       mmb = "mouse:274";
     };
+    misc = {
+      delete = "Delete";
+      insert = "Insert";
+    };
   };
   apps = {
     kitty = "kitty";
@@ -136,6 +140,14 @@ let
   ipc = {
     launcher = "noctalia msg panel-toggle launcher";
     lock = "noctalia msg session lock";
+    settings = "noctalia msg settings-toggle";
+    clipboard = "noctalia msg panel-toggle clipboard";
+    wallpaper_random = "noctalia msg wallpaper-random";
+    emoji_picker = "noctalia msg panel-toggle launcher /emo";
+    session_picker = "noctalia msg panel-toggle session";
+    volup = "noctalia msg volume-up";
+    voldn = "noctalia msg volume-down";
+    volmut = "noctalia msg volume-mute";
   };
 in
 {
@@ -228,8 +240,6 @@ in
           "${keys.mod.super}+${keys.alphabet.c}" = "exec ${apps.vscode}";
           "${keys.mod.super}+${keys.mod.shift}+${keys.alphabet.c}" = "reload";
           "${keys.mod.super}+${keys.alphabet.q}" = "kill container";
-          "${keys.mod.super}+${keys.special.space}" = "exec ${ipc.launcher}";
-          "${keys.mod.super}+${keys.alphabet.l}" = "exec ${ipc.lock}";
           "${keys.mod.super}+1" = "workspace number 1";
           "${keys.mod.super}+2" = "workspace number 2";
           "${keys.mod.super}+3" = "workspace number 3";
@@ -254,6 +264,17 @@ in
           "${keys.mod.super}+${keys.mod.shift}+${keys.arrow.up}" = "move container to workspace next";
           "${keys.mod.super}+${keys.alphabet.v}" = "split v";
           "${keys.mod.super}+${keys.alphabet.h}" = "split h";
+          "${keys.mod.super}+${keys.alphabet.t}" = "floating toggle";
+          "${keys.mod.super}+${keys.special.space}" = "exec ${ipc.launcher}";
+          "${keys.mod.super}+${keys.alphabet.l}" = "exec ${ipc.lock}";
+          "${keys.mod.super}+${keys.punctuation.period}" = "exec ${ipc.settings}";
+          "${keys.mod.alt}+${keys.alphabet.c}" = "exec ${ipc.clipboard}";
+          "${keys.mod.alt}+${keys.alphabet.w}" = "exec ${ipc.wallpaper_random}";
+          "${keys.mod.super}+${keys.punctuation.comma}" = "exec ${ipc.emoji_picker}";
+          "${keys.mod.ctrl}+${keys.mod.alt}+${keys.misc.delete}" = "exec ${ipc.session_picker}";
+          "${keys.xf86.audioraisevolume}" = "exec ${ipc.volup}";
+          "${keys.xf86.audiolowervolume}" = "exec ${ipc.voldn}";
+          "${keys.xf86.audiomute}" = "exec ${ipc.volmut}";
       };
     };
     extraConfigEarly = ''
