@@ -1,7 +1,6 @@
 {...}: 
 let 
   signingKey = "23CB9036D288EB47BA6A193AE7C1A4DFA58BB3A9";
-  githubCredentialHelper = "!/run/current-system/sw/bin/gh auth git-credential";
 in
 {
   programs.git = {
@@ -29,10 +28,10 @@ in
       };
       credential = {
         "https://github.com" = {
-          helper = githubCredentialHelper;
+          helper = "!/run/current-system/sw/bin/gh auth git-credential";
         };
         "https://gist.github.com" = {
-          helper = githubCredentialHelper;
+          helper = "!/run/current-system/sw/bin/gh auth git-credential";
         };
       };
       http = {
@@ -46,14 +45,5 @@ in
 
   programs.lazygit.enable = true;
 
-  programs.gh = {
-    enable = true;
-    settings.git_protocol = "ssh";
-    hosts = {
-      "github.com" = {
-        user = "muhammadtalha-quant";
-      };
-    };
-    gitCredentialHelper.enable = false; 
-  };
+  programs.gh.enable = true;
 }
