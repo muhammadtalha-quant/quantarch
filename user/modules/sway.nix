@@ -1,4 +1,4 @@
-{pkgs, ...}: 
+{...}: 
 let 
   gruvbox = {
     primary            = "#b8bb26";
