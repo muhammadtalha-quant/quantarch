@@ -1,5 +1,0 @@
-[bar]
-order = ["main-bar"]
-
-[bar.main-bar]
-enabled = true
