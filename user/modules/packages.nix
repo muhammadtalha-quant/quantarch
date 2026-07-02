@@ -7,5 +7,6 @@
     nautilus
     wl-clipboard
     papers
+    gnome-text-editor
   ];
 }
