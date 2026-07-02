@@ -158,17 +158,13 @@ in
     config = {
       modifier = keys.mod.super;
       terminal = apps.kitty;
-
+      defaultWorkspace = "workspace number 1";
       bars = [];
       startup = [
         {
           always = false;
           command = "noctalia";
         }
-	      {
-	        always = false;
-	        command = "swaymsg workspace 1";
-	      }
       ];
 
       window = {
