@@ -5,6 +5,11 @@
     xwayland.enable = true;
     extraPackages = [ ];
   };
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
   programs.fish.enable = true;
   programs.gnupg.agent = {
     enable = true;
