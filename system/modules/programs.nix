@@ -5,7 +5,6 @@
     xwayland.enable = true;
     extraPackages = [ ];
   };
-  programs.kdeconnect.enable = true;
   programs.fish.enable = true;
   programs.gnupg.agent = {
     enable = true;

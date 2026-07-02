@@ -9,6 +9,5 @@
     alejandra
     nix-output-monitor
     capitaine-cursors-themed
-    sshfs
   ];
 }
