@@ -20,6 +20,9 @@
   
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
+    QT_QPA_PLATFORMTHEME = "gtk3";
+    QT_QPA_PLATFORM = "wayland;xcb";
+    GTK_THEME = "Gruvbox-Dark";
   };
   time.timeZone = "Asia/Karachi";
   nixpkgs.config.allowUnfree = true;

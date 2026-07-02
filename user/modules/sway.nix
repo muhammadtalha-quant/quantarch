@@ -162,6 +162,10 @@ in
       bars = [];
       startup = [
         {
+          always = true;
+          command = "systemctl --user import-environment";
+        }
+        {
           always = false;
           command = "noctalia";
         }

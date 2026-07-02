@@ -18,7 +18,7 @@
     font = {
       package = null;
       name = "JetBrainsMono Nerd Font Mono";
-      size = 12;
+      size = 11;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
@@ -39,9 +39,5 @@
     name = "Capitaine Cursors (Gruvbox)";
     package = pkgs.capitaine-cursors-themed;
     size = 28;
-  };
-  home.sessionVariables = {
-    QT_QPA_PLATFORM = "wayland;xcb";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
   };
 }

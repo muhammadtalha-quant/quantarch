@@ -95,7 +95,7 @@ in
       };
       theme = {
         source = "wallpaper";
-        wallpaper_scheme = "vibrant";
+        wallpaper_scheme = "faithful";
         templates = {
           builtin_ids = [ ];
           enable_community_templates = false;
