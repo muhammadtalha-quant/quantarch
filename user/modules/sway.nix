@@ -289,17 +289,6 @@ in
       shadows enable
       shadow_blur_radius 4
       shadow_color #1a1a1aee
-
-      blur enable
-      blur_radius 3
-      blur_passes 2
-
-      layer_effects "noctalia-bar" {
-        blur enable
-      }
-      layer_effects "noctalia-notification" {
-          blur enable
-      }
     '';
   };
 }
