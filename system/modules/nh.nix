@@ -1,7 +1,7 @@
 {...}: {
   programs.nh = {
     enable = true;
-    flake = "/home/muhammadtalha/dotfiles";
+    flake = "/home/muhammadtalha/dotnix";
 
     clean = {
       enable = true;
