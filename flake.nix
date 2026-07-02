@@ -14,11 +14,15 @@
     };
     noctalia = {
     	url = "github:noctalia-dev/noctalia";
-	inputs.nixpkgs.follows = "nixpkgs";
+	    inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia-greeter = {
-	url = "github:noctalia-dev/noctalia-greeter";
-	inputs.nixpkgs.follows = "nixpkgs";
+	    url = "github:noctalia-dev/noctalia-greeter";
+	    inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

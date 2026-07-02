@@ -17,6 +17,8 @@
       ./modules/cava.nix
       ./modules/wmutils.nix
       ./modules/styling.nix
+      inputs.nvf.homeManagerModules.default
+      ./modules/nvf-nvim.nix
   ];
   
   home.username = "muhammadtalha";
