@@ -5,6 +5,7 @@
     xwayland.enable = true;
     extraPackages = [ ];
   };
+  programs.kdeconnect.enable = true;
   programs.fish.enable = true;
   programs.gnupg.agent = {
     enable = true;
@@ -20,6 +21,7 @@
     settings = {
       cursor = {
         theme = "Capitaine Cursors (Gruvbox)";
+        package = pkgs.capitaine-cursors-themed;
         size = 28;
       };
       keyboard = {
