@@ -94,7 +94,8 @@ in
         tooltip_format = "{:%B %A %d, %Y}";
       };
       theme = {
-        builtin = "Gruvbox";
+        source = "wallpaper";
+        wallpaper_scheme = "vibrant";
         templates = {
           builtin_ids = [ ];
           enable_community_templates = false;
@@ -294,8 +295,8 @@ in
             background = false;
             bands = 100;
             centered = false;
-            color_1 = "secondary";
-            color_2 = "tertiary";
+            color_1 = "primary";
+            color_2 = "secondary";
             show_when_idle = false;
           };
         };
