@@ -21,7 +21,6 @@
     settings = {
       cursor = {
         theme = "Capitaine Cursors (Gruvbox)";
-        package = pkgs.capitaine-cursors-themed;
         size = 28;
       };
       keyboard = {
