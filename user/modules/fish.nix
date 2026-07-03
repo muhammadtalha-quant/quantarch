@@ -44,6 +44,7 @@
     b = "nh os boot";
     t = "nh os test";
     u = "nix flake update --flake $FLAKE_PATH";
+    yfm = "yazi";
   };
   myPlugins = [
     {
