@@ -5,5 +5,6 @@
     localsend
     google-chrome
     wl-clipboard
+    ouch
   ];
 }
