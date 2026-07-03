@@ -1,14 +1,10 @@
 {pkgs, inputs,  ...}: {
   programs.sway = {
     enable = true;
-    package = pkgs.swayfx;
+    package = pkgs.sway;
+    wrapperFeatures.gtk = true;
     xwayland.enable = true;
     extraPackages = [ ];
-  };
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   programs.fish.enable = true;
   programs.gnupg.agent = {
@@ -33,4 +29,5 @@
     };
   };
   programs.gpu-screen-recorder.enable = true;
+  programs.dconf.enable = true;
 }

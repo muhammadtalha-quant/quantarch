@@ -154,7 +154,6 @@ in
   wayland.windowManager.sway = {
     enable = true;
     package = null;
-    checkConfig = false;
     config = {
       modifier = keys.mod.super;
       terminal = apps.kitty;
@@ -282,13 +281,6 @@ in
 
       exec_always dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"
       exec_always dconf write /org/gnome/desktop/interface/cursor-size 28
-    '';
-    extraConfig = ''
-      corner_radius 20
-
-      shadows enable
-      shadow_blur_radius 4
-      shadow_color #1a1a1aee
     '';
   };
 }
