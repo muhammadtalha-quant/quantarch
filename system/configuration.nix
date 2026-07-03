@@ -15,6 +15,7 @@
     ./modules/i18n.nix
     ./modules/nix.nix
     ./modules/nh.nix
+    ./modules/xdg.nix
     inputs.noctalia-greeter.nixosModules.default
   ];
   
