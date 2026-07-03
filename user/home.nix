@@ -20,6 +20,7 @@
       inputs.nvf.homeManagerModules.default
       ./modules/nvf-nvim.nix
       ./modules/yazi.nix
+      ./modules/zathura.nix
   ];
   
   home.username = "muhammadtalha";
