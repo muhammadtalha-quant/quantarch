@@ -4,7 +4,7 @@
     newcomputermodern
   ];
   environment.systemPackages = with pkgs; [
-    neovim
+    neovim-unwrapped
     nixd
     alejandra
     nix-output-monitor
@@ -13,5 +13,8 @@
     unzip
     _7zz
     file
+    glib
+    gsettings-desktop-schemas
+    gcc
   ];
 }
