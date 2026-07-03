@@ -7,9 +7,9 @@
   xdg.mime = {
     enable = true;
     defaultApplications = {
-      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
-      "text/plain" = [ "org.gnome.TextEditor.desktop" ];
-      "application/pdf" = [ "org.gnome.Papers.desktop" ];
+      "inode/directory" = [ "yazi.desktop" ];
+      "text/*" = [ "nvim.desktop" ];
+      "application/pdf" = [ "org.pwmt.zathura.desktop" ];
       "image/*" = [ "imv.desktop" ];
       "video/*" = [ "umpv.desktop" ];
       "audio/*" = [ "umpv.desktop" ];
