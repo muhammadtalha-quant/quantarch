@@ -13,8 +13,6 @@
     unzip
     _7zz
     file
-    glib
-    gsettings-desktop-schemas
     gcc
   ];
 }

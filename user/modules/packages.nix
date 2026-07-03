@@ -4,9 +4,6 @@
     vscode # intended for removal
     localsend
     google-chrome
-    nautilus
     wl-clipboard
-    papers
-    gnome-text-editor
   ];
 }
