@@ -1,34 +1,4 @@
-{lib, ...}: 
-      /*
-programs.nvf.settings.vim
-│
-
-├── binds
-├── keymaps
-│
-├── languages
-│   ├── enableLSP
-│   ├── enableTreesitter
-│   ├── enableFormat
-│   ├── enableExtraDiagnostics
-│   │
-│   ├── nix
-│   ├── lua
-│   ├── bash
-│   ├── html
-│   ├── css
-│   ├── ts
-│   ├── js
-│   ├── json
-│   ├── yaml
-│   ├── markdown
-│   └── ...
-│
-├── formatter
-├── lsp
-└── plugins
-*/
-{
+{lib, ...}: {
   programs.nvf = {
     enable = true;
     settings = {
@@ -120,8 +90,9 @@ programs.nvf.settings.vim
         };
         # TODO means when I feel the need so I will enable it
         #TODO: assitant
+        lsp.enable = true;
+        debugger.nvim-dap.enable = true;
         languages = {
-          enableLSP = true;
           enableExtraDiagnostics = true;
           enableFormat = true;
           enableTreesitter = true;
