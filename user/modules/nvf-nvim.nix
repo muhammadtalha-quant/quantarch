@@ -111,7 +111,6 @@
         };
         projects.project-nvim.enable = true;
         notes.todo-comments.enable = true;
-        notes.obsidian.enable = true;
         notify.nvim-notify.enable = true;
         clipboard.enable = true;
         clipboard.providers.wl-copy.enable = true;
