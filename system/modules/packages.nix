@@ -5,8 +5,6 @@
   ];
   environment.systemPackages = with pkgs; [
     neovim-unwrapped
-    nixd
-    alejandra
     nix-output-monitor
     capitaine-cursors-themed
     zip
