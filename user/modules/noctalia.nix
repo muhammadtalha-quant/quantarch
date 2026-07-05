@@ -117,6 +117,9 @@ in
           {
             type = "clipboard";
           }
+          {
+            type = "caffeine";            
+                    }
         ];
       };
       bar = {
