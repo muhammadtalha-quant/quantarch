@@ -7,6 +7,7 @@
           shiftwidth = 4;
           tabstop = 4;
         };
+        utility.multicursors.enable = true;
         dashboard.dashboard-nvim = {
           enable = true;
           setupOpts = {
@@ -99,15 +100,15 @@
           enableDAP = true;
           
           nix.enable = true;
-          typst.enable = true;
+          #typst.enable = true;
           cmake.enable = true;
           clang.enable = true;
-          toml.enable = true;
+          #toml.enable = true;
           yaml.enable = true;
-          sql.enable = true;
-          json.enable = true;
+          #sql.enable = true;
+          #json.enable = true;
           markdown.enable = true;
-          python.enable = true;
+          #python.enable = true;
         };
         projects.project-nvim.enable = true;
         notes.todo-comments.enable = true;
