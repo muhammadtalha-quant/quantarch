@@ -285,6 +285,8 @@ in
             input_opacity = 0.0;
             input_radius = 0.0;
             show_login_button = false;
+            show_password_hint = false;
+            show_caps_lock = false;
           };
         };
         widget.audiovis = {
