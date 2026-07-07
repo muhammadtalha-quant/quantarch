@@ -33,25 +33,31 @@
                   icon = " ";
                   desc = "New file";
                   action = "ene | startinsert";
+                  key = "n";
                 }
                 {
                   icon = " ";
-                  desc = "Find file";
+                  desc = "Find files";
                   action = "Telescope find_files";
+                  key = "f";
                 }
                 {
                   icon = " ";
                   desc = "Recent files";
                   action = "Telescope oldfiles";
+                  key = "o";
                 }
                 {
                   icon = "󰙅 ";
-                  desc = "Explorer";
-                  action = "lua vim.cmd(\"Neotree toggle\")";
+                  desc = "File Explorer";
+                  action = "Neotree toggle";
+                  key = "e";
                 }
               ];
               footer = [
-                "Ready to codify your thoughts ? Let's Roll !"
+                "================================================="
+                "==> 💡 Got an idea ? Let's bring it to life   <=="
+                "================================================="
               ];
             };
           };
@@ -85,7 +91,6 @@
         ui = {
           borders.enable = true;
           modes-nvim.enable = true;
-          noice.enable = true;
           illuminate.enable = true;
           colorizer.enable = true;
         };
