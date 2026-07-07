@@ -43,47 +43,47 @@ This may look modular, but by execution, this is a monolithic flake.
 The repository tree looks like this, alongside is the purpose of each file.
 
 ```
- .
-├──  flake.lock  # Pins exact version of packages I use, enhances reproducibility.
-├──  flake.nix   # The definition of my configuration, think of it as build system script if you can't relate.
-├── 󰂺 README.md   # The file that you are reading now.
-├──  system      # A module that handles system-wide configuration that is applied to every user on the system.
-│   ├──  configuration.nix                 # This is the main starting point of system configuration.
-│   ├──  disko.nix                         # disk partioning.
-│   ├──  hardware-configuration.nix        # hardware configuration (i); kernel modules + cpu architecture. (not portable).
-│   └──  modules # A directory that contains submodules of the system module.
-│       ├──  audio.nix                     # audio management.
-│       ├──  bootloader.nix                # bootloader configuration.
-│       ├──  firewall.nix                  # firewall configuration.
-│       ├──  hardware.nix                  # hardware configuration (ii); manages the hardware attribute set.
-│       ├──  i18n.nix                      # internationalisation configuration.
-│       ├──  networking.nix                # network settings.
-│       ├──  nh.nix                        # nh (nix helper) configuration.
-│       ├──  nix.nix                       # configuration of nix attribute set.
-│       ├──  packages.nix                  # package list; packages to be installed for all users.
-│       ├──  programs.nix                  # configuration of programs attribute set.
-│       ├──  services.nix                  # configuration system services.
-│       ├──  users.nix                     # configuration of users.
-│       └──  xdg.nix                       # configuration of xdg configuration. 
-└──  user        # A module that handle user level configuration. 
-    ├──  home.nix                          # This is the main starting point of user configuration.
-    └──  modules # A directory that handles user-wide configuration.
-        ├──  btop.nix                      # configuration of btop resource monitor.   
-        ├──  cava.nix                      # configuration of cava audio visualizer.
-        ├──  eza.nix                       # configuration of eza, the modern ls replacement.
-        ├──  fastfetch.nix                 # configuration of fastfetch.
-        ├──  fish.nix                      # configuration of fish shell, the default shell for main user.
-        ├──  kitty.nix                     # configuration of the kitty terminal emulator.
-        ├──  noctalia.nix                  # configuration of noctalia shell v5.
-        ├──  nvf-nvim.nix                  # configuration of neovim via the NVF framework.
-        ├──  packages.nix                  # package list; packages to be installed for the user.
-        ├──  starship.nix                  # configuration of starship, the shell prompt.
-        ├──  styling.nix                   # configuration for app theming, icon packs and cursor themes.
-        ├──  sway.nix                      # configuration for sway window manager.
-        ├──  vcs.nix                       # configuration for version control systems, mainly git and github-cli.
-        ├──  wmutils.nix                   # configuration for some additional utilities to enhance WM experience.
-        ├──  yazi.nix                      # configuration for yazi, the blazing fast terminal FM.
-        └──  zathura.nix                   # configuration for zathura pdf viewer.
+/
+├── flake.lock  # Pins exact version of packages I use, enhances reproducibility.
+├── flake.nix   # The definition of my configuration, think of it as build system script if you can't relate.
+├── README.md   # The file that you are reading now.
+├── system/      # A module that handles system-wide configuration that is applied to every user on the system.
+│   ├── configuration.nix                 # This is the main starting point of system configuration.
+│   ├── disko.nix                         # disk partioning.
+│   ├── hardware-configuration.nix        # hardware configuration (i); kernel modules + cpu architecture. (not portable).
+│   └── modules/ # A directory that contains submodules of the system module.
+│       ├── audio.nix                     # audio management.
+│       ├── bootloader.nix                # bootloader configuration.
+│       ├── firewall.nix                  # firewall configuration.
+│       ├── hardware.nix                  # hardware configuration (ii); manages the hardware attribute set.
+│       ├── i18n.nix                      # internationalisation configuration.
+│       ├── networking.nix                # network settings.
+│       ├── nh.nix                        # nh (nix helper) configuration.
+│       ├── nix.nix                       # configuration of nix attribute set.
+│       ├── packages.nix                  # package list; packages to be installed for all users.
+│       ├── programs.nix                  # configuration of programs attribute set.
+│       ├── services.nix                  # configuration system services.
+│       ├── users.nix                     # configuration of users.
+│       └── xdg.nix                       # configuration of xdg configuration. 
+└── user/        # A module that handle user level configuration. 
+    ├── home.nix                          # This is the main starting point of user configuration.
+    └── modules/ # A directory that contains submodules for the user module.
+        ├── btop.nix                      # configuration of btop resource monitor.   
+        ├── cava.nix                      # configuration of cava audio visualizer.
+        ├── eza.nix                       # configuration of eza, the modern ls replacement.
+        ├── fastfetch.nix                 # configuration of fastfetch.
+        ├── fish.nix                      # configuration of fish shell, the default shell for main user.
+        ├── kitty.nix                     # configuration of the kitty terminal emulator.
+        ├── noctalia.nix                  # configuration of noctalia shell v5.
+        ├── nvf-nvim.nix                  # configuration of neovim via the NVF framework.
+        ├── packages.nix                  # package list; packages to be installed for the user.
+        ├── starship.nix                  # configuration of starship, the shell prompt.
+        ├── styling.nix                   # configuration for app theming, icon packs and cursor themes.
+        ├── sway.nix                      # configuration for sway window manager.
+        ├── vcs.nix                       # configuration for version control systems, mainly git and github-cli.
+        ├── wmutils.nix                   # configuration for some additional utilities to enhance WM experience.
+        ├── yazi.nix                      # configuration for yazi, the blazing fast terminal FM.
+        └── zathura.nix                   # configuration for zathura pdf viewer.
 ```
 
 ---
