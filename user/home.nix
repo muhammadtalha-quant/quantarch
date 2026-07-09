@@ -18,7 +18,7 @@
       ./modules/wmutils.nix
       ./modules/styling.nix
       inputs.nvf.homeManagerModules.default
-      ./modules/nvf-nvim.nix
+      ./modules/nvim.nix
       ./modules/yazi.nix
       ./modules/zathura.nix
   ];
