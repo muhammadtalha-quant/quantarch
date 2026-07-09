@@ -12,5 +12,6 @@
     _7zz
     file
     gcc
+    fzf
   ];
 }
