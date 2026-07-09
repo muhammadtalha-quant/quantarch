@@ -6,8 +6,12 @@
                 opts = {
                     shiftwidth = 4;
                     tabstop = 4;
+                    undofile = true;
+                    scrolloff = 8;
+                    relativenumber = true;
+                    number = true;
                 };
-                utility.multicursors.enable = true;
+               utility.multicursors.enable = true;
                 dashboard.dashboard-nvim = {
                     enable = true;
                     setupOpts = {
@@ -29,29 +33,35 @@
                                 ""
                             ];
                             center = [
-                                {
-                                    icon = " ";
+                                { 
+                                    icon = " "; 
                                     desc = "New file";
                                     action = "ene | startinsert";
-                                    key = "n";
+                                    key = "n"; 
                                 }
-                                {
-                                    icon = " ";
+                                { 
+                                    icon = " "; 
                                     desc = "Find files";
                                     action = "Telescope find_files";
-                                    key = "f";
+                                    key = "f"; 
                                 }
-                                {
-                                    icon = " ";
+                                { 
+                                    icon = " "; 
+                                    desc = "Find text (Grep)";
+                                    action = "Telescope live_grep";
+                                    key = "g"; 
+                                }
+                                { 
+                                    icon = " "; 
                                     desc = "Recent files";
                                     action = "Telescope oldfiles";
-                                    key = "o";
+                                    key = "o"; 
                                 }
-                                {
-                                    icon = "󰙅 ";
+                                { 
+                                    icon = "󰙅 "; 
                                     desc = "File Explorer";
                                     action = "Neotree toggle";
-                                    key = "e";
+                                    key = "e"; 
                                 }
                             ];
                             footer = [
@@ -93,9 +103,11 @@
                     modes-nvim.enable = true;
                     illuminate.enable = true;
                     colorizer.enable = true;
+                    fastaction.enable = true; 
                 };
                 lsp.enable = true;
                 debugger.nvim-dap.enable = true;
+                lsp.lightbulb.enable = true;
                 languages = {
                     enableExtraDiagnostics = true;
                     enableFormat = true;
@@ -123,6 +135,8 @@
                     ai.enable = true;
                     comment.enable = true;
                     pairs.enable = true;
+                    hipatterns.enable = true;
+
                     icons.enable = true;
                     tabline.enable = true; 
                     bracketed.enable = true;
