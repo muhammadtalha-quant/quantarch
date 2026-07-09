@@ -19,7 +19,6 @@ in
           categories = false;
           sort_by_usage = false;
         };
-        greeter_sync.auto_sync = true;
         panel = {
           borders = false;
           clipboard_position = "auto";

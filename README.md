@@ -75,7 +75,7 @@ The repository tree looks like this, alongside is the purpose of each file.
         ├── fish.nix                      # configuration of fish shell, the default shell for main user.
         ├── kitty.nix                     # configuration of the kitty terminal emulator.
         ├── noctalia.nix                  # configuration of noctalia shell v5.
-        ├── nvf-nvim.nix                  # configuration of neovim via the NVF framework.
+        ├── nvim.nix                  # configuration of neovim via the NVF framework.
         ├── packages.nix                  # package list; packages to be installed for the user.
         ├── starship.nix                  # configuration of starship, the shell prompt.
         ├── styling.nix                   # configuration for app theming, icon packs and cursor themes.
