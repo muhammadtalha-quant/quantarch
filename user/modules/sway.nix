@@ -232,7 +232,7 @@ in
                 "${keys.mod.super}+${keys.special.enter}" = "exec ${apps.kitty}";
                 "${keys.mod.super}+${keys.alphabet.b}" = "exec ${apps.chrome}";
                 "${keys.mod.super}+${keys.alphabet.c}" = "exec \"${apps.neovim}\"";
-                "${keys.mod.super}+${keys.alphabet.f}" = "exec \"${apps.yazi}\"";
+                "${keys.mod.super}+${keys.alphabet.e}" = "exec \"${apps.yazi}\"";
                 "${keys.mod.super}+${keys.mod.shift}+${keys.alphabet.c}" = "reload";
                 "${keys.mod.super}+${keys.alphabet.q}" = "kill";
                 "${keys.mod.super}+1" = "workspace number 1";
@@ -257,7 +257,7 @@ in
                 "${keys.mod.super}+${keys.mod.shift}+0" = "move container to workspace number 10";
                 "${keys.mod.super}+${keys.alphabet.v}" = "split v";
                 "${keys.mod.super}+${keys.alphabet.h}" = "split h";
-                "${keys.mod.super}+${keys.alphabet.t}" = "floating toggle";
+                "${keys.mod.super}+${keys.alphabet.f}" = "floating toggle";
                 "${keys.mod.super}+${keys.special.space}" = "exec ${ipc.launcher}";
                 "${keys.mod.super}+${keys.alphabet.l}" = "exec ${ipc.lock}";
                 "${keys.mod.super}+${keys.punctuation.period}" = "exec ${ipc.settings}";
@@ -268,6 +268,11 @@ in
                 "${keys.xf86.audioraisevolume}" = "exec ${ipc.volup}";
                 "${keys.xf86.audiolowervolume}" = "exec ${ipc.voldn}";
                 "${keys.xf86.audiomute}" = "exec ${ipc.volmut}";
+                "${keys.mod.super}+${keys.alphabet.t}" = "layout toggle split tabbed";
+                "${keys.mod.super}+${keys.arrow.left}" = "focus left";
+                "${keys.mod.super}+${keys.arrow.right}" = "focus right";
+                "${keys.mod.super}+${keys.mod.shift}+${keys.arrow.left}" = "move left";
+                "${keys.mod.super}+${keys.mod.shift}+${keys.arrow.right}" = "move right";
             };
         };
         extraConfigEarly = ''
