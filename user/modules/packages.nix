@@ -1,9 +1,9 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    localsend
-    google-chrome
-    wl-clipboard
-    ouch
-  ];
+    home.packages = with pkgs; [
+        localsend
+        google-chrome
+        wl-clipboard
+        ouch
+    ];
 }
