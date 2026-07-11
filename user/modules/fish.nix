@@ -46,6 +46,8 @@ let
         t = "nh os test";
         u = "nix flake update --flake $FLAKE_PATH";
         fm = "yazi";
+        ta = "tmux attach-session -t";
+        tn = "tmux new -As";
     };
     myPlugins = [
         {
