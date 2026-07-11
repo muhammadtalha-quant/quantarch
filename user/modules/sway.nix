@@ -255,8 +255,6 @@ in
                 "${keys.mod.super}+${keys.mod.shift}+8" = "move container to workspace number 8";
                 "${keys.mod.super}+${keys.mod.shift}+9" = "move container to workspace number 9";
                 "${keys.mod.super}+${keys.mod.shift}+0" = "move container to workspace number 10";
-                "${keys.mod.super}+${keys.arrow.up}" = "workspace next";
-                "${keys.mod.super}+${keys.mod.shift}+${keys.arrow.up}" = "move container to workspace next";
                 "${keys.mod.super}+${keys.alphabet.v}" = "split v";
                 "${keys.mod.super}+${keys.alphabet.h}" = "split h";
                 "${keys.mod.super}+${keys.alphabet.t}" = "floating toggle";
