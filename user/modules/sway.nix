@@ -1,4 +1,3 @@
-{ ... }:
 let
     gruvbox = {
         primary = "#b8bb26";
@@ -232,8 +231,8 @@ in
             keybindings = {
                 "${keys.mod.super}+${keys.special.enter}" = "exec ${apps.kitty}";
                 "${keys.mod.super}+${keys.alphabet.b}" = "exec ${apps.chrome}";
-                "${keys.mod.super}+${keys.alphabet.c}" = "exec ${apps.neovim}";
-                "${keys.mod.super}+${keys.alphabet.f}" = "exec ${apps.yazi}";
+                "${keys.mod.super}+${keys.alphabet.c}" = "exec \"${apps.neovim}\"";
+                "${keys.mod.super}+${keys.alphabet.f}" = "exec \"${apps.yazi}\"";
                 "${keys.mod.super}+${keys.mod.shift}+${keys.alphabet.c}" = "reload";
                 "${keys.mod.super}+${keys.alphabet.q}" = "kill";
                 "${keys.mod.super}+1" = "workspace number 1";
