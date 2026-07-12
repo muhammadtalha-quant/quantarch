@@ -41,13 +41,14 @@ let
         less = "less -R";
         cls = "clear";
         vim = "nvim";
-        s = "nh os switch";
-        b = "nh os boot";
-        t = "nh os test";
-        u = "nix flake update --flake $FLAKE_PATH";
+        nswitch = "nh os switch";
+        nboot = "nh os boot";
+        ntest = "nh os test";
+        fupdate = "nix flake update --flake $FLAKE_PATH";
         fm = "yazi";
-        ta = "tmux attach-session -td";
+        ta = "tmux attach-session -dt";
         tn = "tmux new -As";
+        tl = "tmux list-sessions";
     };
     myPlugins = [
         {
@@ -59,10 +60,6 @@ let
             src = pkgs.fishPlugins.autopair.src;
         }
     ];
-    clh = ''
-        clear && echo yes | history clear
-        fish
-    '';
 in
 {
     xdg.configFile."fish/conf.d/fishenv.fish".text = ''
@@ -74,6 +71,9 @@ in
         shellAbbrs = myAbbreviations;
         shellInit = "fastfetch";
         plugins = myPlugins;
-        functions.clh.body = clh;
+        functions.clh.body = ''
+            clear && echo yes | history clear
+            fish
+        '';
     };
 }
