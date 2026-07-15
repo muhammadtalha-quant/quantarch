@@ -1,49 +1,50 @@
 # My NixOS Configuration
 
-A monolithic NixOS flake configuring my complete system.
-It configures everything from disk partitioning and OS installation to
-a complete minimal, aesthetic and perfectly usable linux environment
-powered by Noctalia Shell and SwayWM.  
+> [!NOTE]
+> I am replacing Noctalia v5 + Sway with Niri + DMS (DankMaterialShell).</br>
+> **Why ?** </br> Because the machine that I am daily driving now is so weak
+> that I can't afford to recompile the whole shell everytime I want to update my
+> system, secondly my screen is 13-inch which is obviously very small for tiling
+> window manager whether it is hyprland or sway, it does not matter.
+
+A monolithic NixOS flake configuring my complete system. It configures
+everything from disk partitioning and OS installation to a complete minimal,
+aesthetic and perfectly usable linux environment powered by Noctalia Shell and
+SwayWM.
 
 > [!WARNING]
-> This configuration is not designed for general public in mind.
-> However, if you prefer to create a single user monolithic flake like so,
-  you are free to use this repository as reference.
-> If you are interested in reproducing my setup, then [read this](./docs/reproducing.md).
+> This configuration is not designed for general public in mind. However, if you
+> prefer to create a single user monolithic flake like so, you are free to use
+> this repository as reference. If you are interested in reproducing my setup,
+> then [read this](./docs/reproducing.md).
 
 ---
-## Showcase ✨
-* **Video**
 
-https://github.com/user-attachments/assets/0c080d23-309a-461d-a3fa-03a06c8a212f
-
-* **Screenshots:**
-
-<img width="1366" height="767" alt="ss1" src="https://github.com/user-attachments/assets/396d2015-57c5-40a0-920d-c92183cb1aab" />
-
-<img width="1366" height="768" alt="ss2" src="https://github.com/user-attachments/assets/824c8893-5e68-4efe-bc70-4e5e66fe36e3" />
-
----
 ## Repository Architecture
 
-This repository houses my entire system architecture, split cleanly into two distinct modules:
+This repository houses my entire system architecture, split cleanly into two
+distinct modules:
 
-* **System Module:** This module handle system level configuration, which is user agnostic.
-* **User Module:** Handles my user environment, managing everything that an optimized user environment needs.
+- **System Module:** This module handle system level configuration, which is
+  user agnostic.
+- **User Module:** Handles my user environment, managing everything that an
+  optimized user environment needs.
 
 > [!NOTE]
-> - This configuration is highly optimized for single user setup (root user added for safety), focused on daily driving.
+>
+> - This configuration is highly optimized for single user setup (root user
+>   added for safety), focused on daily driving.
 
-**Repository Structure**
+As I've said above this is a monolithic flake, this monolith has evolved into a
+non-standard (according to NixOS configuration layouts by the definitions of nix
+community) yet a modular flake.
 
-As I've said above this is a monolithic flake, this monolith has evolved into a non-standard (according to NixOS configuration layouts by the definitions of nix community) yet a modular flake.
-
-This may look modular, but by execution, this is a monolithic flake. 
+This may look modular, but by execution, this is a monolithic flake.
 
 The repository tree looks like this, alongside is the purpose of each file.
 
-```
-/
+```text
+.
 ├── flake.lock  # Pins exact version of packages I use, enhances reproducibility.
 ├── flake.nix   # The definition of my configuration, think of it as build system script if you can't relate.
 ├── README.md   # The file that you are reading now.
@@ -64,18 +65,18 @@ The repository tree looks like this, alongside is the purpose of each file.
 │       ├── programs.nix                  # configuration of programs attribute set.
 │       ├── services.nix                  # configuration system services.
 │       ├── users.nix                     # configuration of users.
-│       └── xdg.nix                       # configuration of xdg configuration. 
-└── user/        # A module that handle user level configuration. 
+│       └── xdg.nix                       # configuration of xdg configuration.
+└── user/        # A module that handle user level configuration.
     ├── home.nix                          # This is the main starting point of user configuration.
     └── modules/ # A directory that contains submodules for the user module.
-        ├── btop.nix                      # configuration of btop resource monitor.   
+        ├── btop.nix                      # configuration of btop resource monitor.
         ├── cava.nix                      # configuration of cava audio visualizer.
         ├── eza.nix                       # configuration of eza, the modern ls replacement.
         ├── fastfetch.nix                 # configuration of fastfetch.
         ├── fish.nix                      # configuration of fish shell, the default shell for main user.
         ├── kitty.nix                     # configuration of the kitty terminal emulator.
         ├── noctalia.nix                  # configuration of noctalia shell v5.
-        ├── nvim.nix                  # configuration of neovim via the NVF framework.
+        ├── nvim.nix                      # configuration of neovim via the NVF framework.
         ├── packages.nix                  # package list; packages to be installed for the user.
         ├── starship.nix                  # configuration of starship, the shell prompt.
         ├── styling.nix                   # configuration for app theming, icon packs and cursor themes.
@@ -87,5 +88,7 @@ The repository tree looks like this, alongside is the purpose of each file.
 ```
 
 ---
-## LICENSE 
+
+## LICENSE
+
 MIT
