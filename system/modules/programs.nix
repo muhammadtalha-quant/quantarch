@@ -1,6 +1,9 @@
 { pkgs, ... }: {
     programs = {
-        niri.enable = true;
+        niri = {
+            enable = true;
+            package = pkgs.niri;
+        };
         fish.enable = true;
         gnupg.agent = {
             enable = true;

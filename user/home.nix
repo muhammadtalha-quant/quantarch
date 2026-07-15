@@ -12,7 +12,6 @@
         inputs.dms.homeModules.dank-material-shell
         inputs.dms.homeModules.niri
         ./modules/dms.nix
-        inputs.niri.homeModules.niri
         #./modules/niri.nix
         ./modules/btop.nix
         ./modules/packages.nix

@@ -17,6 +17,7 @@
         ./modules/nix.nix
         ./modules/nh.nix
         ./modules/xdg.nix
+        inputs.niri.nixosModules.niri
     ];
 
     environment.sessionVariables = {
