@@ -87,11 +87,6 @@
                     };
                 };
                 git.enable = true;
-                theme = {
-                    enable = true;
-                    name = "gruvbox";
-                    style = "dark";
-                };
                 terminal.toggleterm = {
                     enable = true;
                     lazygit.enable = true;

@@ -5,6 +5,7 @@
         ./hardware-configuration.nix
         ./modules/hardware.nix
         ./modules/audio.nix
+        ./modules/stylix.nix
         ./modules/services.nix
         ./modules/users.nix
         ./modules/bootloader.nix
@@ -20,9 +21,7 @@
 
     environment.sessionVariables = {
         LIBVA_DRIVER_NAME = "iHD";
-        QT_QPA_PLATFORMTHEME = "gtk3";
-        QT_QPA_PLATFORM = "wayland;xcb";
-        GTK_THEME = "Gruvbox-Dark";
+        DMS_DISABLE_MATUGEN = "true";
         EDITOR = "nvim";
         VISUAL = "nvim";
         FLAKE_PATH = "/home/muhammadtalha/dotnix";

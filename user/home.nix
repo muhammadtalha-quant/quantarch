@@ -9,14 +9,15 @@
         ./modules/kitty.nix
         ./modules/vcs.nix
         ./modules/eza.nix
-        inputs.noctalia.homeModules.default
-        ./modules/noctalia.nix
-        ./modules/sway.nix
+        inputs.dms.homeModules.dank-material-shell
+        inputs.dms.homeModules.niri
+        ./modules/dms.nix
+        inputs.niri.homeModules.niri
+        #./modules/niri.nix
         ./modules/btop.nix
         ./modules/packages.nix
         ./modules/cava.nix
         ./modules/wmutils.nix
-        ./modules/styling.nix
         inputs.nvf.homeManagerModules.default
         ./modules/nvim.nix
         ./modules/yazi.nix
@@ -24,11 +25,12 @@
         ./modules/tmux.nix
     ];
 
-    home.username = "muhammadtalha";
-    home.homeDirectory = "/home/muhammadtalha";
-
-    home.stateVersion = "26.05";
-
     programs.home-manager.enable = true;
+
+    home = {
+        username = "muhammadtalha";
+        homeDirectory = "/home/muhammadtalha";
+        stateVersion = "26.05";
+    };
 
 }
