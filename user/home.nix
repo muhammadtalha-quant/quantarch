@@ -29,6 +29,7 @@
     home = {
         username = "muhammadtalha";
         homeDirectory = "/home/muhammadtalha";
+        pointerCursor.enable = true;
         stateVersion = "26.05";
     };
 
