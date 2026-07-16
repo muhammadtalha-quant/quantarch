@@ -5,7 +5,6 @@
         plugins = {
             ouch = pkgs.yaziPlugins.ouch;
             smart_enter = pkgs.yaziPlugins.smart-enter;
-            yatline = pkgs.yaziPlugins.yatline;
             recycleBin = pkgs.yaziPlugins.omni-trash;
         };
         settings = {
@@ -39,6 +38,14 @@
                 {
                     on = [ "C" ];
                     run = "plugin ouch";
+                }
+                {
+                    on = [ "<Enter>" ];
+                    run = "plugin smart-enter";
+                }
+                {
+                    on = [ "R" ];
+                    run = "plugin omni-trash";
                 }
             ];
         };
