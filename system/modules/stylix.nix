@@ -24,6 +24,11 @@
                 name = "Noto Color Emoji";
             };
         };
+        iconTheme = {
+            enable = true;
+            package = pkgs.papirus-icon-theme;
+            dark = "Papirus-Dark";
+        };
     };
 
 }
