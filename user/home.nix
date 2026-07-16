@@ -4,7 +4,7 @@
 
     imports = [
         ./modules/fish.nix
-        ./modules/omp.nix
+        ./modules/starship.nix
         ./modules/fastfetch.nix
         ./modules/ghostty.nix
         ./modules/vcs.nix
