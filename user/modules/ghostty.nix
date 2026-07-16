@@ -18,10 +18,8 @@
             cursor-style = "bar";
             clipboard-read = "allow";
             clipboard-write = "allow";
-            tab-bar = "hidden";
             keybind = [
                 "ctrl+shift+equal=increase_font_size:2"
-                "ctrl+shift+plus=increase_font_size:2"
                 "ctrl+shift+minus=decrease_font_size:2"
                 "ctrl+shift+backspace=reset_font_size"
                 "ctrl+shift+c=copy_to_clipboard"
