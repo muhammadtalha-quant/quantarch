@@ -20,6 +20,7 @@
         inputs.niri.nixosModules.niri
     ];
 
+    niri-flake.cache.enable = false;
     environment.sessionVariables = {
         LIBVA_DRIVER_NAME = "iHD";
         DMS_DISABLE_MATUGEN = "true";
