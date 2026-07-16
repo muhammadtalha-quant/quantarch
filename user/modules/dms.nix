@@ -10,7 +10,6 @@
         niri.includes.enable = false;
         niri = {
             enableKeybinds = true;
-            enableSpawn = true;
         };
     };
 }
