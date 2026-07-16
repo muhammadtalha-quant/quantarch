@@ -6,7 +6,7 @@
         ./modules/fish.nix
         ./modules/starship.nix
         ./modules/fastfetch.nix
-        ./modules/kitty.nix
+        ./modules/ghostty.nix
         ./modules/vcs.nix
         ./modules/eza.nix
         inputs.dms.homeModules.dank-material-shell
