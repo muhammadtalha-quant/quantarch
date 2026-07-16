@@ -24,10 +24,15 @@
                 name = "Noto Color Emoji";
             };
         };
-        iconTheme = {
+        icons = {
             enable = true;
             package = pkgs.papirus-icon-theme;
             dark = "Papirus-Dark";
+        };
+        cursor = {
+            name = "catppuccin-macchiato-peach-cursors";
+            package = pkgs.catppuccin-cursors;
+            size = 24;
         };
     };
 
