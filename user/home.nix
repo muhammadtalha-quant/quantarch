@@ -12,7 +12,7 @@
         inputs.dms.homeModules.dank-material-shell
         inputs.dms.homeModules.niri
         ./modules/dms.nix
-        #./modules/niri.nix
+        ./modules/niri.nix
         ./modules/btop.nix
         ./modules/packages.nix
         ./modules/cava.nix
