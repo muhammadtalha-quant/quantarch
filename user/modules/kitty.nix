@@ -1,8 +1,17 @@
 { ... }: {
+    stylix.targets.kitty = {
+        fonts.enable = false;
+        opacity.enable = false;
+    };
     programs.kitty = {
         enable = true;
+        font = {
+            name = "JetBrainsMono Nerd Font Mono";
+            size = 14;
+        };
         settings = {
             remember_window_size = true;
+            background_opacity = 0.95;
             confirm_os_window_close = 0;
             enable_audio_bell = false;
             scrollback = "never";
