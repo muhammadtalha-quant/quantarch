@@ -4,8 +4,8 @@
         enableFishIntegration = true;
         plugins = {
             ouch = pkgs.yaziPlugins.ouch;
-            smart_enter = pkgs.yaziPlugins.smart-enter;
-            recycleBin = pkgs.yaziPlugins.omni-trash;
+            smart-enter = pkgs.yaziPlugins.smart-enter;
+            omni-trash = pkgs.yaziPlugins.omni-trash;
         };
         settings = {
             mgr = {
