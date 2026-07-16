@@ -1,7 +1,6 @@
 {
     stylix.targets.ghostty = {
         fonts.enable = false;
-        opacity.enable = false;
     };
     programs.ghostty = {
         enable = true;
@@ -9,7 +8,6 @@
         settings = {
             font-size = 14;
             font-family = "JetBrainsMono Nerd Font Mono";
-            background-opacity = 0.85;
             window-decoration = "none";
             confirm-close-surface = false;
             mouse-hide-while-typing = true;
