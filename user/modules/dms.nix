@@ -1,12 +1,16 @@
-{ inputs, pkgs, ... }: {
+{
     programs.dank-material-shell = {
         enable = true;
+        systemd = {
+            enable = true;
+            restartIfChanged = true;
+        };
         enableSystemMonitoring = true;
-        dgop.package = inputs.dgop.packages.${pkgs.stdenv.hostPlatform.system}.default;
+        enableAudioWavelength = true;
         niri.includes.enable = false;
         niri = {
-            enableKeybinds = true; # Sets static preset keybinds
-            enableSpawn = true; # Auto-start DMS with niri, if enabled
+            enableKeybinds = true;
+            enableSpawn = true;
         };
     };
 }
