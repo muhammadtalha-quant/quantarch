@@ -31,9 +31,9 @@
             dark = "Papirus-Dark";
         };
         cursor = {
-            name = "catppuccin-macchiato-peach-cursors";
-            package = pkgs.catppuccin-cursors;
-            size = 24;
+            name = "Capitaine Cursors (Gruvbox)";
+            package = pkgs.capitaine-cursors-themed;
+            size = 26;
         };
     };
 
