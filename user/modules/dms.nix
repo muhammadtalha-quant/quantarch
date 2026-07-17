@@ -17,6 +17,9 @@
                 "colors"
                 "layout"
                 "wpblur"
+                "cursor"
+                "windowrules"
+                "outputs"
             ];
         };
     };
