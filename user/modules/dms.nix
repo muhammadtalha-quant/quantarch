@@ -7,9 +7,17 @@
         };
         enableSystemMonitoring = true;
         enableAudioWavelength = true;
-        niri.includes.enable = false;
-        niri = {
-            enableKeybinds = true;
+        niri.includes = {
+            enable = true;
+            override = false;
+            originalFileName = "hm";
+            filesToInclude = [
+                "alttab"
+                "binds"
+                "colors"
+                "layout"
+                "wpblur"
+            ];
         };
     };
 }
