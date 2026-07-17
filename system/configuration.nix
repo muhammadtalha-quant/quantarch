@@ -4,7 +4,7 @@
     imports = [
         ./hardware-configuration.nix
         ./modules/hardware.nix
-        ./modules/audio.nix
+        ./modules/security.nix
         ./modules/stylix.nix
         ./modules/services.nix
         ./modules/users.nix
@@ -24,6 +24,7 @@
     environment.sessionVariables = {
         LIBVA_DRIVER_NAME = "iHD";
         DMS_DISABLE_MATUGEN = "true";
+        DMS_SCREENSHOT_EDITOR = "satty";
         EDITOR = "nvim";
         VISUAL = "nvim";
         FLAKE_PATH = "/home/muhammadtalha/dotnix";
