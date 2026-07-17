@@ -6,5 +6,6 @@
         wl-clipboard
         ouch
         trash-cli
+        drawing
     ];
 }
