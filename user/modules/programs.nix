@@ -38,6 +38,6 @@
                 ytdl-format = "bestvideo+bestaudio";
             };
         };
-
+        satty.enable = true;
     };
 }
