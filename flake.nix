@@ -23,7 +23,6 @@
             url = "github:AvengeMedia/dgop";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        tmux-powerkit.url = "github:fabioluciano/tmux-powerkit";
         niri = {
             url = "github:sodiboo/niri-flake";
             inputs.nixpkgs.follows = "nixpkgs";

@@ -35,13 +35,6 @@
             {
                 plugin = tmux-fzf;
             }
-            {
-                plugin = inputs.tmux-powerkit.packages.${pkgs.stdenv.hostPlatform.system}.default;
-                extraConfig = ''
-                    set -g @powerkit_plugins "datetime,git,hostname"
-                    set -g @powerkit_plugin_datetime_format "%I:%M %p"
-                '';
-            }
         ];
     };
 }
