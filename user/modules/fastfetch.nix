@@ -1,14 +1,14 @@
 let
-    gruvbox = {
-        primary = "#b8bb26";
-        on_primary = "#282828";
-        secondary = "#fabd2f";
-        tertiary = "#83a598";
-        error = "#fb4934";
-        surface = "#282828";
-        on_surface = "#fbf1c7";
-        on_surface_variant = "#ebdbb2";
-        outline = "#786f6b";
+    colors = {
+        base04 = "#bdae93";
+        base07 = "#fbf1c7";
+        base08 = "#fb4934";
+        base09 = "#fe8019";
+        base0A = "#fabd2f";
+        base0B = "#b8bb26";
+        base0C = "#8ec07c";
+        base0D = "#83a598";
+        base0E = "#d3869b";
     };
 in
 {
@@ -37,42 +37,42 @@ in
                     type = "os";
                     key = "   OS";
                     format = "{3}";
-                    keyColor = "${gruvbox.error}";
+                    keyColor = "${colors.base08}";
                 }
                 {
                     type = "kernel";
                     key = "   Kernel";
                     format = "{1} {2}";
-                    keyColor = "${gruvbox.error}";
+                    keyColor = "${colors.base08}";
                 }
                 {
                     type = "packages";
                     key = "  󰏗 Packages";
-                    keyColor = "${gruvbox.primary}";
+                    keyColor = "${colors.base0B}";
                 }
                 {
                     type = "display";
                     key = "  󰍹 Display";
                     format = "{1}x{2} @ {3}Hz [{7}]";
-                    keyColor = "${gruvbox.primary}";
+                    keyColor = "${colors.base0D}";
                 }
                 {
                     type = "terminal";
                     key = "   Terminal";
                     format = "{3} {6}";
-                    keyColor = "${gruvbox.secondary}";
+                    keyColor = "${colors.base0A}";
                 }
                 {
                     type = "shell";
                     key = "   Shell";
                     format = "{6} {4}";
-                    keyColor = "${gruvbox.secondary}";
+                    keyColor = "${colors.base0A}";
                 }
                 {
                     type = "wm";
                     key = "  󱗃 WM";
                     format = "{2}";
-                    keyColor = "${gruvbox.secondary}";
+                    keyColor = "${colors.base0E}";
                 }
                 {
                     type = "custom";
@@ -83,7 +83,7 @@ in
                     type = "title";
                     key = "  ";
                     format = "{6} {7} {8}";
-                    keyColor = "${gruvbox.primary}";
+                    keyColor = "${colors.base07}";
                 }
                 {
                     type = "custom";
@@ -93,31 +93,31 @@ in
                     type = "cpu";
                     format = "{1} @ {7}";
                     key = "   CPU";
-                    keyColor = "${gruvbox.tertiary}";
+                    keyColor = "${colors.base0C}";
                 }
                 {
                     type = "gpu";
                     format = "{1} {2}";
                     key = "  󰊴 GPU";
-                    keyColor = "${gruvbox.tertiary}";
+                    keyColor = "${colors.base0C}";
                 }
                 {
                     type = "memory";
                     key = "   Memory ";
-                    format = "{1} used out of {2}";
-                    keyColor = "${gruvbox.secondary}";
+                    format = "{1} {2}";
+                    keyColor = "${colors.base0B}";
                 }
                 {
                     type = "disk";
                     key = "  󱦟 OS Age ";
                     folders = "/";
-                    keyColor = "${gruvbox.error}";
+                    keyColor = "${colors.base09}";
                     format = "{days} days";
                 }
                 {
                     type = "uptime";
                     key = "  󱫐 Uptime ";
-                    keyColor = "${gruvbox.error}";
+                    keyColor = "${colors.base04}";
                 }
                 {
                     type = "custom";

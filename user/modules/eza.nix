@@ -1,270 +1,290 @@
-{...}: {
-  programs.eza = {
-    enable = true;
-    theme = {
-      colorful = true;
-      filekinds = {
-        normal = {
-          foreground = "#ebdbb2";
-        };
-        directory = {
-          foreground = "#83a598";
-        };
-        symlink = {
-          foreground = "#8ec07c";
-        };
-        pipe = {
-          foreground = "#928374";
-        };
-        block_device = {
-          foreground = "#fb4934";
-        };
-        char_device = {
-          foreground = "#fb4934";
-        };
-        socket = {
-          foreground = "#665c54";
-        };
-        special = {
-          foreground = "#d3869b";
-        };
-        executable = {
-          foreground = "#b8bb26";
-        };
-        mount_point = {
-          foreground = "#fe8019";
-        };
-      };
-      perms = {
-        user_read = {
-          foreground = "#ebdbb2";
-        };
-        user_write = {
-          foreground = "#fabd2f";
-        };
-        user_execute_file = {
-          foreground = "#b8bb26";
-        };
-        user_execute_other = {
-          foreground = "#b8bb26";
-        };
-        group_read = {
-          foreground = "#ebdbb2";
-        };
-        group_write = {
-          foreground = "#fabd2f";
-        };
-        group_execute = {
-          foreground = "#b8bb26";
-        };
-        other_read = {
-          foreground = "#bdae93";
-        };
-        other_write = {
-          foreground = "#fabd2f";
-        };
-        other_execute = {
-          foreground = "#b8bb26";
-        };
-        special_user_file = {
-          foreground = "#d3869b";
-        };
-        special_other = {
-          foreground = "#928374";
-        };
-        attribute = {
-          foreground = "#bdae93";
-        };
-      };
-      size = {
-        major = {
-          foreground = "#bdae93";
-        };
-        minor = {
-          foreground = "#8ec07c";
-        };
-        number_byte = {
-          foreground = "#ebdbb2";
-        };
-        number_kilo = {
-          foreground = "#ebdbb2";
-        };
-        number_mega = {
-          foreground = "#83a598";
-        };
-        number_giga = {
-          foreground = "#d3869b";
-        };
-        number_huge = {
-          foreground = "#d3869b";
-        };
-        unit_byte = {
-          foreground = "#bdae93";
-        };
-        unit_kilo = {
-          foreground = "#83a598";
-        };
-        unit_mega = {
-          foreground = "#d3869b";
-        };
-        unit_giga = {
-          foreground = "#d3869b";
-        };
-        unit_huge = {
-          foreground = "#fe8019";
-        };
-      };
-      users = {
-        user_you = {
-          foreground = "#ebdbb2";
-        };
-        user_root = {
-          foreground = "#fb4934";
-        };
-        user_other = {
-          foreground = "#d3869b";
-        };
-        group_yours = {
-          foreground = "#ebdbb2";
-        };
-        group_other = {
-          foreground = "#928374";
-        };
-        group_root = {
-          foreground = "#fb4934";
-        };
-      };
-      links = {
-        normal = {
-          foreground = "#8ec07c";
-        };
-        multi_link_file = {
-          foreground = "#fe8019";
-        };
-      };
-      git = {
-        new = {
-          foreground = "#b8bb26";
-        };
-        modified = {
-          foreground = "#fabd2f";
-        };
-        deleted = {
-          foreground = "#fb4934";
-        };
-        renamed = {
-          foreground = "#8ec07c";
-        };
-        typechange = {
-          foreground = "#d3869b";
-        };
-        ignored = {
-          foreground = "#928374";
-        };
-        conflicted = {
-          foreground = "#cc241d";
-        };
-      };
-      git_repo = {
-        branch_main = {
-          foreground = "#ebdbb2";
-        };
-        branch_other = {
-          foreground = "#d3869b";
-        };
-        git_clean = {
-          foreground = "#b8bb26";
-        };
-        git_dirty = {
-          foreground = "#fb4934";
-        };
-      };
-      security_context = {
-        colon = {
-          foreground = "#928374";
-        };
-        user = {
-          foreground = "#ebdbb2";
-        };
-        role = {
-          foreground = "#d3869b";
-        };
-        typ = {
-          foreground = "#665c54";
-        };
-        range = {
-          foreground = "#d3869b";
-        };
-      };
-      file_type = {
-        image = {
-          foreground = "#fabd2f";
-        };
-        video = {
-          foreground = "#fb4934";
-        };
-        music = {
-          foreground = "#b8bb26";
-        };
-        lossless = {
-          foreground = "#8ec07c";
-        };
-        crypto = {
-          foreground = "#928374";
-        };
-        document = {
-          foreground = "#ebdbb2";
-        };
-        compressed = {
-          foreground = "#d3869b";
-        };
-        temp = {
-          foreground = "#cc241d";
-        };
-        compiled = {
-          foreground = "#83a598";
-        };
-        build = {
-          foreground = "#928374";
-        };
-        source = {
-          foreground = "#83a598";
-        };
-      };
-      punctuation = {
-        foreground = "#928374";
-      };
-      date = {
-        foreground = "#fabd2f";
-      };
-      inode = {
-        foreground = "#bdae93";
-      };
-      blocks = {
-        foreground = "#a89984";
-      };
-      header = {
-        foreground = "#ebdbb2";
-      };
-      octal = {
-        foreground = "#8ec07c";
-      };
-      flags = {
-        foreground = "#d3869b";
-      };
-      symlink_path = {
-        foreground = "#8ec07c";
-      };
-      control_char = {
-        foreground = "#83a598";
-      };
-      broken_symlink = {
-        foreground = "#fb4934";
-      };
-      broken_path_overlay = {
-        foreground = "#928374";
-      };
+let
+    colors = {
+        base02 = "#504945";
+        base03 = "#665c54";
+
+        base04 = "#bdae93";
+        base05 = "#d5c4a1";
+        base06 = "#ebdbb2";
+        base07 = "#fbf1c7";
+
+        base08 = "#fb4934";
+        base09 = "#fe8019";
+        base0A = "#fabd2f";
+        base0B = "#b8bb26";
+        base0C = "#8ec07c";
+        base0D = "#83a598";
+        base0E = "#d3869b";
+        base0F = "#d65d0e";
     };
-    enableFishIntegration = true;
-  };
+in
+{
+    programs.eza = {
+        enable = true;
+        theme = {
+            colorful = true;
+            filekinds = {
+                normal = {
+                    foreground = "${colors.base05}";
+                };
+                directory = {
+                    foreground = "${colors.base0D}";
+                };
+                symlink = {
+                    foreground = "${colors.base0C}";
+                };
+                pipe = {
+                    foreground = "${colors.base03}";
+                };
+                block_device = {
+                    foreground = "${colors.base0F}";
+                };
+                char_device = {
+                    foreground = "${colors.base0F}";
+                };
+                socket = {
+                    foreground = "${colors.base02}";
+                };
+                special = {
+                    foreground = "${colors.base0E}";
+                };
+                executable = {
+                    foreground = "${colors.base0B}";
+                };
+                mount_point = {
+                    foreground = "${colors.base09}";
+                };
+            };
+            perms = {
+                user_read = {
+                    foreground = "${colors.base05}";
+                };
+                user_write = {
+                    foreground = "${colors.base0A}";
+                };
+                user_execute_file = {
+                    foreground = "${colors.base0B}";
+                };
+                user_execute_other = {
+                    foreground = "${colors.base0B}";
+                };
+                group_read = {
+                    foreground = "${colors.base05}";
+                };
+                group_write = {
+                    foreground = "${colors.base0A}";
+                };
+                group_execute = {
+                    foreground = "${colors.base0B}";
+                };
+                other_read = {
+                    foreground = "${colors.base04}";
+                };
+                other_write = {
+                    foreground = "${colors.base0A}";
+                };
+                other_execute = {
+                    foreground = "${colors.base0B}";
+                };
+                special_user_file = {
+                    foreground = "${colors.base0E}";
+                };
+                special_other = {
+                    foreground = "${colors.base03}";
+                };
+                attribute = {
+                    foreground = "${colors.base04}";
+                };
+            };
+            size = {
+                major = {
+                    foreground = "${colors.base04}";
+                };
+                minor = {
+                    foreground = "${colors.base0C}";
+                };
+                number_byte = {
+                    foreground = "${colors.base05}";
+                };
+                number_kilo = {
+                    foreground = "${colors.base05}";
+                };
+                number_mega = {
+                    foreground = "${colors.base0D}";
+                };
+                number_giga = {
+                    foreground = "${colors.base0E}";
+                };
+                number_huge = {
+                    foreground = "${colors.base09}";
+                };
+                unit_byte = {
+                    foreground = "${colors.base04}";
+                };
+                unit_kilo = {
+                    foreground = "${colors.base0D}";
+                };
+                unit_mega = {
+                    foreground = "${colors.base0E}";
+                };
+                unit_giga = {
+                    foreground = "${colors.base0E}";
+                };
+                unit_huge = {
+                    foreground = "${colors.base09}";
+                };
+            };
+            users = {
+                user_you = {
+                    foreground = "${colors.base06}";
+                };
+                user_root = {
+                    foreground = "${colors.base08}";
+                };
+                user_other = {
+                    foreground = "${colors.base0E}";
+                };
+                group_yours = {
+                    foreground = "${colors.base05}";
+                };
+                group_other = {
+                    foreground = "${colors.base03}";
+                };
+                group_root = {
+                    foreground = "${colors.base08}";
+                };
+            };
+            links = {
+                normal = {
+                    foreground = "${colors.base0C}";
+                };
+                multi_link_file = {
+                    foreground = "${colors.base09}";
+                };
+            };
+            git = {
+                new = {
+                    foreground = "${colors.base08}";
+                };
+                modified = {
+                    foreground = "${colors.base0A}";
+                };
+                deleted = {
+                    foreground = "${colors.base08}";
+                };
+                renamed = {
+                    foreground = "${colors.base0C}";
+                };
+                typechange = {
+                    foreground = "${colors.base0E}";
+                };
+                ignored = {
+                    foreground = "${colors.base03}";
+                };
+                conflicted = {
+                    foreground = "${colors.base09}";
+                };
+            };
+            git_repo = {
+                branch_main = {
+                    foreground = "${colors.base06}";
+                };
+                branch_other = {
+                    foreground = "${colors.base0E}";
+                };
+                git_clean = {
+                    foreground = "${colors.base0B}";
+                };
+                git_dirty = {
+                    foreground = "${colors.base08}";
+                };
+            };
+            security_context = {
+                colon = {
+                    foreground = "${colors.base03}";
+                };
+                user = {
+                    foreground = "${colors.base05}";
+                };
+                role = {
+                    foreground = "${colors.base0E}";
+                };
+                typ = {
+                    foreground = "${colors.base02}";
+                };
+                range = {
+                    foreground = "${colors.base0E}";
+                };
+            };
+            file_type = {
+                image = {
+                    foreground = "${colors.base0A}";
+                };
+                video = {
+                    foreground = "${colors.base08}";
+                };
+                music = {
+                    foreground = "${colors.base0B}";
+                };
+                lossless = {
+                    foreground = "${colors.base0C}";
+                };
+                crypto = {
+                    foreground = "${colors.base0F}";
+                };
+                document = {
+                    foreground = "${colors.base05}";
+                };
+                compressed = {
+                    foreground = "${colors.base0E}";
+                };
+                temp = {
+                    foreground = "${colors.base08}";
+                };
+                compiled = {
+                    foreground = "${colors.base0D}";
+                };
+                build = {
+                    foreground = "${colors.base03}";
+                };
+                source = {
+                    foreground = "${colors.base0D}";
+                };
+            };
+            punctuation = {
+                foreground = "${colors.base03}";
+            };
+            date = {
+                foreground = "${colors.base0A}";
+            };
+            inode = {
+                foreground = "${colors.base04}";
+            };
+            blocks = {
+                foreground = "${colors.base04}";
+            };
+            header = {
+                foreground = "${colors.base07}";
+            };
+            octal = {
+                foreground = "${colors.base0C}";
+            };
+            flags = {
+                foreground = "${colors.base0E}";
+            };
+            symlink_path = {
+                foreground = "${colors.base0C}";
+            };
+            control_char = {
+                foreground = "${colors.base0D}";
+            };
+            broken_symlink = {
+                foreground = "${colors.base08}";
+            };
+            broken_path_overlay = {
+                foreground = "${colors.base03}";
+            };
+        };
+        enableFishIntegration = true;
+    };
 }
