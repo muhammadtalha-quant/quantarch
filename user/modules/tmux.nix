@@ -18,6 +18,10 @@
             }
             {
                 plugin = resurrect;
+                extraConfig = ''
+                    set -g @resurrect-strategy-nvim 'session'
+                    set -g @resurrect-processes 'lazygit'
+                '';
             }
             {
                 plugin = continuum;

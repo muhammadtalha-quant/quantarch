@@ -15,6 +15,17 @@
         displayManager.dms-greeter = {
             enable = true;
             compositor.name = "niri";
+            customConfig = ''
+                hotkey-overlay {
+                    skip-at-startup
+                }
+
+                environment {
+                    DMS_RUN_GREETER "1"
+                    XCURSOR_THEME "Capitaine Cursors (Gruvbox)"
+                    XCURSOR_SIZE "26"
+                }
+            '';
             configHome = "/home/muhammadtalha";
             logs = {
                 save = true;
