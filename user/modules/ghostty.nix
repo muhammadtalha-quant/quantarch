@@ -1,7 +1,5 @@
 {
-    stylix.targets.ghostty = {
-        fonts.enable = false;
-    };
+    stylix.targets.ghostty.fonts.enable = false;
     programs.ghostty = {
         enable = true;
         enableFishIntegration = true;
@@ -10,8 +8,11 @@
             font-family = "JetBrainsMono Nerd Font Mono";
             window-decoration = "none";
             confirm-close-surface = false;
+            copy-on-select = false;
             mouse-hide-while-typing = true;
-            copy-on-select = "clipboard";
+            notify-on-command-finish = "unfocused";
+            notify-on-command-finish-action = "no-bell,notify";
+            notify-on-command-finish-after = "5s";
             scrollback-limit = 100000;
             cursor-style = "bar";
             clipboard-read = "allow";
@@ -24,6 +25,7 @@
                 "ctrl+shift+v=paste_from_clipboard"
                 "ctrl+shift+t=unbind"
                 "ctrl+shift+w=unbind"
+                "ctrl+v=unbind"
                 "ctrl+shift+o=unbind"
                 "ctrl+shift+n=unbind"
                 "ctrl+shift+e=unbind"
