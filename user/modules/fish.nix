@@ -52,14 +52,11 @@ let
     };
     myPlugins = [
         {
-            name = "done";
-            src = pkgs.fishPlugins.done.src;
-        }
-        {
             name = "autopair";
             src = pkgs.fishPlugins.autopair.src;
         }
     ];
+    myAliases = { }; # force remove aliases
 in
 {
     xdg.configFile."fish/conf.d/fishenv.fish".text = ''
@@ -69,6 +66,7 @@ in
     programs.fish = {
         enable = true;
         shellAbbrs = myAbbreviations;
+        shellAliases = myAliases;
         shellInit = "fastfetch";
         plugins = myPlugins;
         functions.clh.body = ''
