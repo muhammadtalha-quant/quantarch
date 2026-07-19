@@ -1,5 +1,6 @@
 let
     colors = {
+        base03 = "#665c54";
         base04 = "#bdae93";
         base07 = "#fbf1c7";
         base08 = "#fb4934";
@@ -8,7 +9,7 @@ let
         base0B = "#b8bb26";
         base0C = "#5f6c1f";
         base0D = "#b8bb26";
-        base0E = "#5f6c1f";
+        base0E = "#96bda2";
 
     };
 in
@@ -94,13 +95,13 @@ in
                     type = "cpu";
                     format = "{1} @ {7}";
                     key = "   CPU";
-                    keyColor = "${colors.base0C}";
+                    keyColor = "${colors.base03}";
                 }
                 {
                     type = "gpu";
                     format = "{1} {2}";
                     key = "  󰊴 GPU";
-                    keyColor = "${colors.base0C}";
+                    keyColor = "${colors.base03}";
                 }
                 {
                     type = "memory";

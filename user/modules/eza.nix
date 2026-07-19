@@ -12,7 +12,7 @@ let
         base0B = "#b8bb26";
         base0C = "#5f6c1f";
         base0D = "#b8bb26";
-        base0E = "#5f6c1f";
+        base0E = "#96bda2";
         base0F = "#d65d0e";
     };
 in
