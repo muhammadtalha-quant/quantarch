@@ -14,7 +14,6 @@
                 };
                 utility = {
                     smart-splits.enable = true;
-                    multicursors.enable = true;
                     yazi-nvim.enable = true;
                 };
                 dashboard.dashboard-nvim = {
