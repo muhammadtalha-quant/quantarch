@@ -1,6 +1,6 @@
 {
+    stylix.targets.cava.rainbow.enable = true;
     programs = {
-        starship.enable = true;
         zathura.enable = true;
         cava = {
             enable = true;
