@@ -6,9 +6,10 @@ let
         base09 = "#fe8019";
         base0A = "#fabd2f";
         base0B = "#b8bb26";
-        base0C = "#8ec07c";
-        base0D = "#83a598";
-        base0E = "#d3869b";
+        base0C = "#5f6c1f";
+        base0D = "#b8bb26";
+        base0E = "#5f6c1f";
+
     };
 in
 {

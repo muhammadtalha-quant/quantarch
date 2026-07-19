@@ -11,6 +11,7 @@
         tmuxp.enable = true;
         extraConfig = ''
             set-option -g renumber-windows on
+
         '';
         plugins = with pkgs.tmuxPlugins; [
             {
@@ -21,6 +22,7 @@
                 extraConfig = ''
                     set -g @resurrect-strategy-nvim 'session'
                     set -g @resurrect-processes 'lazygit'
+                    set -g @resurrect-processes 'yazi'
                 '';
             }
             {
