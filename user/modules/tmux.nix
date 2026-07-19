@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
     programs.tmux = {
         enable = true;
         aggressiveResize = true;
@@ -11,7 +11,9 @@
         tmuxp.enable = true;
         extraConfig = ''
             set-option -g renumber-windows on
-
+            set -g extended-keys always
+            set -g extended-keys-format csi-u
+            set -as terminal-features 'xterm*:extkeys'
         '';
         plugins = with pkgs.tmuxPlugins; [
             {
