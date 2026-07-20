@@ -1,22 +1,9 @@
-{ config, inputs, ... }:
+{ inputs, ... }:
 
 {
     imports = [
         ./hardware-configuration.nix
-        ./modules/hardware.nix
-        ./modules/security.nix
-        ./modules/stylix.nix
-        ./modules/services.nix
-        ./modules/users.nix
-        ./modules/bootloader.nix
-        ./modules/programs.nix
-        ./modules/packages.nix
-        ./modules/networking.nix
-        ./modules/firewall.nix
-        ./modules/i18n.nix
-        ./modules/nix.nix
-        ./modules/nh.nix
-        ./modules/xdg.nix
+        (inputs.import-tree ./modules)
         inputs.niri.nixosModules.niri
     ];
 

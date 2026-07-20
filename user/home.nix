@@ -1,23 +1,12 @@
-{ config, inputs, ... }:
+{ inputs, ... }:
 
 {
 
     imports = [
-        ./modules/fish.nix
-        ./modules/fastfetch.nix
-        ./modules/ghostty.nix
-        ./modules/vcs.nix
-        ./modules/eza.nix
         inputs.dms.homeModules.dank-material-shell
         inputs.dms.homeModules.niri
-        ./modules/dms.nix
-        ./modules/niri.nix
-        ./modules/packages.nix
-        ./modules/programs.nix
         inputs.nvf.homeManagerModules.default
-        ./modules/nvim.nix
-        ./modules/yazi.nix
-        ./modules/tmux.nix
+        (inputs.import-tree ./modules)
     ];
 
     programs.home-manager.enable = true;

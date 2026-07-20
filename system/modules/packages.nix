@@ -12,5 +12,6 @@
         file
         gcc
         fzf
+        tmux
     ];
 }
