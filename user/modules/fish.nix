@@ -50,10 +50,10 @@ let
         tn = "tmux new -As";
         tl = "tmux list-sessions";
     };
-    myPlugins = [
+    myPlugins = with pkgs.fishPlugins; [
         {
             name = "autopair";
-            src = pkgs.fishPlugins.autopair.src;
+            inherit (autopair) src;
         }
     ];
     myAliases = { }; # force remove aliases
@@ -66,8 +66,11 @@ in
     programs.fish = {
         enable = true;
         shellAbbrs = myAbbreviations;
+        preferAbbrs = true;
         shellAliases = myAliases;
-        shellInit = "fastfetch";
+        shellInit = ''
+            fastfetch
+        '';
         plugins = myPlugins;
         functions.clh.body = ''
             clear && echo yes | history clear
