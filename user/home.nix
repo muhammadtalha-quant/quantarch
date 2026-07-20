@@ -3,9 +3,8 @@
 {
 
     imports = [
-        inputs.dms.homeModules.dank-material-shell
-        inputs.dms.homeModules.niri
         inputs.nvf.homeManagerModules.default
+        inputs.homeModules.niri
         (inputs.import-tree ./modules)
     ];
 
