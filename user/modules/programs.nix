@@ -1,6 +1,11 @@
 {
     stylix.targets.cava.rainbow.enable = true;
     programs = {
+        starship = {
+            enable = true;
+            presets = [ "nerd-font-symbols" ];
+            enableFishIntegration = true;
+        };
         zathura.enable = true;
         cava = {
             enable = true;
