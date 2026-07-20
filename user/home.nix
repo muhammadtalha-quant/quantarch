@@ -4,7 +4,7 @@
 
     imports = [
         inputs.nvf.homeManagerModules.default
-        inputs.homeModules.niri
+        inputs.niri-flake.homeModules.niri
         (inputs.import-tree ./modules)
     ];
 

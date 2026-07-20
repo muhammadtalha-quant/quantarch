@@ -4,7 +4,7 @@
     imports = [
         ./hardware-configuration.nix
         (inputs.import-tree ./modules)
-        inputs.niri.nixosModules.niri
+        inputs.niri-flake.nixosModules.niri
     ];
 
     niri-flake.cache.enable = false;
