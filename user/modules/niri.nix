@@ -1,6 +1,8 @@
-{
+{ pkgs, ... }: {
+
     programs.niri = {
         enable = true;
+        package = pkgs.niri;
         config = ''
             spawn-at-startup "noctalia"
             window-rule {
