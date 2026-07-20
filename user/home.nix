@@ -4,6 +4,7 @@
 
     imports = [
         inputs.nvf.homeManagerModules.default
+        inputs.noctalia.homeModules.default
         inputs.niri-flake.homeModules.niri
         (inputs.import-tree ./modules)
     ];
