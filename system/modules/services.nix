@@ -12,16 +12,6 @@
             alsa.support32Bit = true;
             pulse.enable = true;
         };
-        displayManager.dms-greeter = {
-            enable = true;
-            compositor.name = "niri";
-            configHome = "/home/muhammadtalha";
-            logs = {
-                save = true;
-                path = "/tmp/dms-greeter.log";
-            };
-        };
-
+        displayManager.ly.enable = true;
     };
-    systemd.user.services.niri-flake-polkit.enable = false;
 }

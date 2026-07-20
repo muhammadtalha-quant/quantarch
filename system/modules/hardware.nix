@@ -7,8 +7,8 @@
         enable = true;
         extraPackages = with pkgs; [
             intel-media-driver
+            intel-vaapi-driver
             vpl-gpu-rt
-            intel-media-sdk
         ];
     };
     # they are services, but they work with hardware

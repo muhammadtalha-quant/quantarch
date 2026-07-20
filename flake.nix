@@ -1,4 +1,10 @@
 {
+    nixConfig = {
+        extra-substituters = [ "https://noctalia.cachix.org" ];
+        extra-trusted-public-keys = [
+            "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+        ];
+    };
     description = "A monolithic single host flake that manages my complete NixOS System";
 
     inputs = {
@@ -16,15 +22,8 @@
             url = "github:nix-community/disko/master";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        dms = {
-            url = "github:AvengeMedia/DankMaterialShell/stable";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        dgop = {
-            url = "github:AvengeMedia/dgop";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        niri = {
+        noctalia.url = "github:noctalia-dev/noctalia/cachix";
+        niri-flake = {
             url = "github:sodiboo/niri-flake";
             inputs.nixpkgs.follows = "nixpkgs";
         };
