@@ -14,7 +14,7 @@
                 max-cache-ttl = 28800;
             };
         };
-        gpu-screen-recorder.enable = true;
+        obs-studio.enable = true;
         dconf.enable = true;
     };
 }
