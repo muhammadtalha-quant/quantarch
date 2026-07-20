@@ -2,12 +2,10 @@ let
     outputMonitor = "eDP-1";
 in
 {
-    stylix.targets.noctalia.enable = false;
     programs.noctalia = {
         enable = true;
         settings = {
             shell = {
-                font_family = "JetBrainsMono NFM";
                 clipboard_auto_paste = "off";
                 clipboard_confirm_clear_history = false;
                 clipboard_image_action_command = "imv";
@@ -64,19 +62,10 @@ in
             wallpaper = {
                 directory = "/home/muhammadtalha/Pictures/Wallpapers";
                 fill_mode = "stretch";
-                default.path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
-                default.last = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
-                default.monitors."${outputMonitor}".path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.png";
+                default.path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.jpg";
+                default.last = "/home/muhammadtalha/Pictures/Wallpapers/buildings.jpg";
+                default.monitors."${outputMonitor}".path = "/home/muhammadtalha/Pictures/Wallpapers/buildings.jpg";
             };
-            plugins.enabled = [
-                "noctalia/screen_recorder"
-            ];
-            plugin_settings."noctalia/screen_recorder" = {
-                color_range = "full";
-                quality = "high";
-                video_source = "focused";
-            };
-            widget.recorder.type = "noctalia/screen_recorder:recorder";
             widget.weather.show_condition = false;
             widget.network.show_label = false;
             widget.active_window = {
@@ -92,14 +81,6 @@ in
             widget.clock = {
                 format = "{:%I:%M %p}";
                 tooltip_format = "{:%B %A %d, %Y}";
-            };
-            theme = {
-                source = "wallpaper";
-                wallpaper_scheme = "faithful";
-                templates = {
-                    builtin_ids = [ ];
-                    enable_community_templates = false;
-                };
             };
             control_center = {
                 sidebar = "full";
@@ -285,7 +266,6 @@ in
                 schema_version = 2;
                 widget_order = [
                     "loginbox"
-                    "audiovis"
                     "time"
                     "date"
                 ];
@@ -311,23 +291,6 @@ in
                         show_login_button = false;
                         show_password_hint = false;
                         show_caps_lock = false;
-                    };
-                };
-                widget.audiovis = {
-                    box_height = 38.96484375;
-                    box_width = 308.51953125;
-                    cx = 676.525390625;
-                    cy = 500.736328125;
-                    output = outputMonitor;
-                    rotation = 0.0;
-                    type = "audio_visualizer";
-                    settings = {
-                        background = false;
-                        bands = 100;
-                        centered = false;
-                        color_1 = "primary";
-                        color_2 = "secondary";
-                        show_when_idle = false;
                     };
                 };
                 widget.time = {
