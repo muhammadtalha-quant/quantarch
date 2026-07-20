@@ -2,6 +2,7 @@ let
     outputMonitor = "eDP-1";
 in
 {
+    stylix.targets.noctalia.enable = false;
     programs.noctalia = {
         enable = true;
         settings = {
