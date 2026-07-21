@@ -1,4 +1,6 @@
-{...}: {
-  networking.hostName = "quantnix";
-  networking.networkmanager.enable = true;
+{
+    networking = {
+        hostName = "quantnix";
+        networkmanager.enable = true;
+    };
 }

@@ -1,5 +1,9 @@
-{...}: {
-  networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 53317 ];
-  networking.firewall.allowedUDPPorts = [ 53317 ];
+{
+    networking = {
+        firewall = {
+            enable = true;
+            allowedTCPPorts = [ 53317 ];
+            allowedUDPPorts = [ 53317 ];
+        };
+    };
 }

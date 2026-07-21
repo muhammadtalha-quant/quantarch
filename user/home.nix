@@ -1,34 +1,20 @@
-{ config, inputs, ... }:
+{ inputs, ... }:
 
 {
 
     imports = [
-        ./modules/fish.nix
-        ./modules/starship.nix
-        ./modules/fastfetch.nix
-        ./modules/kitty.nix
-        ./modules/vcs.nix
-        ./modules/eza.nix
-        inputs.noctalia.homeModules.default
-        ./modules/noctalia.nix
-        ./modules/sway.nix
-        ./modules/btop.nix
-        ./modules/packages.nix
-        ./modules/cava.nix
-        ./modules/wmutils.nix
-        ./modules/styling.nix
         inputs.nvf.homeManagerModules.default
-        ./modules/nvim.nix
-        ./modules/yazi.nix
-        ./modules/zathura.nix
-        ./modules/tmux.nix
+        inputs.noctalia.homeModules.default
+        (inputs.import-tree ./modules)
     ];
 
-    home.username = "muhammadtalha";
-    home.homeDirectory = "/home/muhammadtalha";
-
-    home.stateVersion = "26.05";
-
     programs.home-manager.enable = true;
+
+    home = {
+        username = "muhammadtalha";
+        homeDirectory = "/home/muhammadtalha";
+        pointerCursor.enable = true;
+        stateVersion = "26.05";
+    };
 
 }

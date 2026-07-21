@@ -5,5 +5,6 @@
         google-chrome
         wl-clipboard
         ouch
+        trash-cli
     ];
 }

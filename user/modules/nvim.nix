@@ -14,7 +14,6 @@
                 };
                 utility = {
                     smart-splits.enable = true;
-                    multicursors.enable = true;
                     yazi-nvim.enable = true;
                 };
                 dashboard.dashboard-nvim = {
@@ -24,13 +23,14 @@
                         config = {
                             header = [
                                 ""
-                                "░███    ░██                                  ░██           "
-                                "░████   ░██                                                "
-                                "░██░██  ░██  ░███████   ░███████  ░████████  ░██░██    ░██ "
-                                "░██ ░██ ░██ ░██    ░██ ░██    ░██ ░██    ░██ ░██ ░██  ░██  "
-                                "░██  ░██░██ ░█████████ ░██    ░██ ░██    ░██ ░██  ░█████   "
-                                "░██   ░████ ░██        ░██    ░██ ░██    ░██ ░██ ░██  ░██  "
-                                "░██    ░███  ░███████   ░███████  ░██    ░██ ░██░██    ░██ "
+                                ""
+                                "░███    ░██                                  ░██            "
+                                "░████   ░██                                                 "
+                                "░██░██  ░██  ░███████   ░███████  ░████████  ░██ ░██    ░██ "
+                                "░██ ░██ ░██ ░██    ░██ ░██    ░██ ░██    ░██ ░██  ░██  ░██  "
+                                "░██  ░██░██ ░█████████ ░██    ░██ ░██    ░██ ░██   ░█████   "
+                                "░██   ░████ ░██        ░██    ░██ ░██    ░██ ░██  ░██  ░██  "
+                                "░██    ░███  ░███████   ░███████  ░██    ░██ ░██ ░██    ░██ "
                                 ""
                                 ""
                             ];
@@ -87,11 +87,6 @@
                     };
                 };
                 git.enable = true;
-                theme = {
-                    enable = true;
-                    name = "gruvbox";
-                    style = "dark";
-                };
                 terminal.toggleterm = {
                     enable = true;
                     lazygit.enable = true;
@@ -104,7 +99,6 @@
                     modes-nvim.enable = true;
                     illuminate.enable = true;
                     colorizer.enable = true;
-                    fastaction.enable = true;
                 };
                 lsp = {
                     enable = true;
