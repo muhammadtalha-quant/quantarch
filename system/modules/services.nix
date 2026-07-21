@@ -13,5 +13,7 @@
             pulse.enable = true;
         };
         displayManager.ly.enable = true;
+        libinput.enable = true;
+        pcscd.enable = true;
     };
 }
