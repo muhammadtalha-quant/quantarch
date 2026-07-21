@@ -23,10 +23,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         noctalia.url = "github:noctalia-dev/noctalia/cachix";
-        niri-flake = {
-            url = "github:sodiboo/niri-flake";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
         nvf = {
             url = "github:notashelf/nvf";
             inputs.nixpkgs.follows = "nixpkgs";
